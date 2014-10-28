@@ -3,19 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ps</string>
+	<string>UIImagePickerController`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>UIImagePickerController *imagePickerVC = [[UIImagePickerController alloc] init];
+imagePickerVC.delegate = self;
+imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+imagePickerVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+imagePickerVC.allowsEditing = YES;
+[self presentViewController:imagePickerVC animated:YES completion:nil];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>834BBD8B-C682-4226-8EDD-7B83BEA94B10</string>
+	<string>B9425405-0FB1-4C6D-9A22-B9AFAD890083</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property</string>
+	<string>UIImagePickerController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

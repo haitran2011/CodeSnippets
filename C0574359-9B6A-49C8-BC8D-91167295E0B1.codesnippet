@@ -3,20 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pc</string>
+	<string>layer`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy) &lt;#type#&gt; *&lt;#name#&gt;;
+	<string>&lt;#view#&gt;.layer.masksToBounds = YES;
+&lt;#view#&gt;.layer.cornerRadius = __cornerRadius__;
+&lt;#view#&gt;.layer.borderColor = [UIColor lightGrayColor].CGColor;
+&lt;#view#&gt;.layer.borderWidth = 1;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5BA30E84-9DF5-4DD0-8E31-400C5BAF55A0</string>
+	<string>C0574359-9B6A-49C8-BC8D-91167295E0B1</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Copy Property</string>
+	<string>Layer setting</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,22 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ps</string>
+	<string>labelLineSpace`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = &lt;#lineSpacing#&gt;;
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:&lt;#font#&gt;], NSParagraphStyleAttributeName:paragraphStyle};
+    label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>834BBD8B-C682-4226-8EDD-7B83BEA94B10</string>
+	<string>A9EADE17-B29F-47A5-A558-C31AD03A5AF1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property</string>
+	<string>Label line space</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

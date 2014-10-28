@@ -3,19 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ps</string>
+	<string>coping`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    &lt;#ClassTpye#&gt; *mutableCopy = [[[self class] allocWithZone:zone] init];
+    [[self properties] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [mutableCopy setValue:[self valueForKey:obj] forKey:obj];
+    }];
+    
+    return mutableCopy;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>834BBD8B-C682-4226-8EDD-7B83BEA94B10</string>
+	<string>14DFD089-063E-4B1A-A16B-F799F1022E82</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property</string>
+	<string>NSCoping</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

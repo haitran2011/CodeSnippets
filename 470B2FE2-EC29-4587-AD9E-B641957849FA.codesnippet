@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>UIGesture`</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)initializeGestureRecognizers {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [&lt;#view#&gt; addGestureRecognizer:tap];
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    [&lt;#view#&gt; addGestureRecognizer:doubleTap];
+    [tap requireGestureRecognizerToFail:doubleTap];
+    
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [&lt;#view#&gt; addGestureRecognizer:panGestureRecognizer];
+    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+    [&lt;#view#&gt; addGestureRecognizer:pinchGestureRecognizer];
+    
+    UIRotationGestureRecognizer *rotateRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotate:)];
+    [&lt;#view#&gt; addGestureRecognizer:rotateRecognizer];
+}
+
+- (void)handleTap:(UITapGestureRecognizer *)sender {
+    
+}
+
+- (void)handleDoubleTap:(UITapGestureRecognizer *)sender {
+    static NSUInteger tapTimes = 0;
+    if (tapTimes % 2) {
+        sender.view.transform = CGAffineTransformIdentity;
+    } else {
+        sender.view.transform = CGAffineTransformScale(sender.view.transform, 2, 2);
+    }
+    
+    tapTimes++;
+}
+
+- (void)handlePan:(UIPanGestureRecognizer*)sender {
+    CGPoint translation = [sender translationInView:sender.view.superview];
+    sender.view.center = CGPointMake(sender.view.center.x + translation.x, sender.view.center.y + translation.y);
+    [sender setTranslation:CGPointZero inView:sender.view.superview];
+}
+
+- (void)handlePinch:(UIPinchGestureRecognizer *)sender {
+    sender.view.transform = CGAffineTransformScale(sender.view.transform, sender.scale, sender.scale);
+    sender.scale = 1;
+}
+
+- (void)handleRotate:(UIRotationGestureRecognizer*)sender {
+    sender.view.transform = CGAffineTransformRotate(sender.view.transform, sender.rotation);
+    sender.rotation = 0;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return NO;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>470B2FE2-EC29-4587-AD9E-B641957849FA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>New UIGestures</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

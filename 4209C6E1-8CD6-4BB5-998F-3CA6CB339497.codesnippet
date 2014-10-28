@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>UICollection`</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
+    [layout setItemSize:CGSizeMake(&lt;#width#&gt;, &lt;#width#&gt;)];
+    [layout setMinimumInteritemSpacing:&lt;#minSpacing#&gt;];
+    [layout setMinimumLineSpacing:&lt;#maxSpacing#&gt;];
+    [layout setSectionInset:UIEdgeInsetsMake(&lt;#top#&gt;, &lt;#left#&gt;, &lt;#bottom#&gt;, &lt;#right#&gt;)];
+    
+    CGRect &lt;#collectionFrame#&gt; = CGRectMake(&lt;#origin.x#&gt;, &lt;#origin.y#&gt;, &lt;#width#&gt;, &lt;#width#&gt;);
+    UICollectionView *_collectionView__ = [[UICollectionView alloc] initWithFrame:&lt;#collectionFrame#&gt; collectionViewLayout:layout];
+    [&lt;#collectionView#&gt; setBackgroundColor:&lt;#backgroundColor#&gt;];
+    [&lt;#collectionView#&gt; registerClass:[&lt;#CellClass#&gt; class] forCellWithReuseIdentifier:&lt;#cellIdentifier#&gt;];
+    [&lt;#view#&gt; addSubview:&lt;#collectionView#&gt;];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4209C6E1-8CD6-4BB5-998F-3CA6CB339497</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>New Collection</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
