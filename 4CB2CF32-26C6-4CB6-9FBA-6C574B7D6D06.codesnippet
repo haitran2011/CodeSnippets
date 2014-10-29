@@ -6,18 +6,24 @@
 	<string>init`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
+	<string>- (instancetype)init {
     self = [super init];
     if (!self) {
         return nil;
     }
     
-    &lt;#initializations#&gt;
+    [self initialize];
     
-    return self;</string>
+    return self;
+}
+
+- (void)initialize {
+    
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4CB2CF32-26C6-4CB6-9FBA-6C574B7D6D06</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -27,6 +33,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

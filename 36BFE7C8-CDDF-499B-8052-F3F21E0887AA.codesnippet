@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>SystemSoundID`</string>
+	<string>dealloc`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    SystemSoundID soundID;
-    NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"alertsound" ofType:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:strSoundFile],&amp;soundID;);
-    AudioServicesPlaySystemSound(soundID);
-</string>
+	<string>- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BECF4B70-C83A-4746-9EA8-674E9C995E4A</string>
+	<string>36BFE7C8-CDDF-499B-8052-F3F21E0887AA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SystemSound</string>
+	<string>Dealloc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
