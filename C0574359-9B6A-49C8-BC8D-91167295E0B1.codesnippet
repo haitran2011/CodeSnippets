@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>&lt;#view#&gt;.layer.masksToBounds = YES;
-&lt;#view#&gt;.layer.cornerRadius = __cornerRadius__;
+&lt;#view#&gt;.layer.cornerRadius = &lt;#cornerRadius#&gt;;
 &lt;#view#&gt;.layer.borderColor = [UIColor lightGrayColor].CGColor;
 &lt;#view#&gt;.layer.borderWidth = 1;
 </string>

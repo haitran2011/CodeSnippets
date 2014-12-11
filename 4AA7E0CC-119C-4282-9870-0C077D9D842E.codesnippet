@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>return objc_getAssociatedObject(self, $&lt;#AssociateKey#&gt;);
+	<string>return objc_getAssociatedObject(self, &amp;&lt;#AssociateKey#&gt;);
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4AA7E0CC-119C-4282-9870-0C077D9D842E</string>
