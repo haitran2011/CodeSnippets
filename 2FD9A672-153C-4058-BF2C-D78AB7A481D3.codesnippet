@@ -3,33 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>init`</string>
+	<string>weakSelf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    [self initialize];
-    
-    return self;
-}
-
-- (void)initialize {
-    
-}
+	<string>__weak typeof(self) weakSelf = self;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4CB2CF32-26C6-4CB6-9FBA-6C574B7D6D06</string>
+	<string>2FD9A672-153C-4058-BF2C-D78AB7A481D3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Init</string>
+	<string>weak self</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
