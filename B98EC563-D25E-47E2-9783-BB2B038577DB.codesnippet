@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>hack_description`</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#if EDBUG
++ (void)load {
+    chx_swizzleInstanceMethod([self class], @selector(description), @selector(hack_description));
+    chx_swizzleInstanceMethod([self class], @selector(debugDescription), @selector(hack_description));
+}
+#endif
+
+- (NSString *)hack_description {
+    NSString *original = [self hack_description];
+    
+    return [@"hack_description:" stringByAppendingString:original];
+}
+
+- (NSString *)description {
+    return [self chx_toString];
+}
+
+- (NSString *)debugDescription {
+    return [self chx_toString];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B98EC563-D25E-47E2-9783-BB2B038577DB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Hack Description</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

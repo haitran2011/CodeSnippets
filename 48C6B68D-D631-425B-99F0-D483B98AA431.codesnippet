@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dispatch_barrier_async`</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    dispatch_queue_t queue = dispatch_queue_create("com.foobar.moch", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        &lt;#task_one#&gt;
+    });
+    dispatch_async(queue, ^{
+        &lt;#task_two#&gt;
+    });
+    dispatch_barrier_async(queue, ^{
+        &lt;#task_barrier#&gt;
+    });
+    dispatch_async(queue, ^{
+        &lt;#task_last#&gt;
+    });
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>48C6B68D-D631-425B-99F0-D483B98AA431</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>dispatch_barrier_async</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
