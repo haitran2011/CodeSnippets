@@ -9,25 +9,53 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - Life Cycle
+	<string>#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
+#import &lt;ReactiveCocoa/RACEXTScope.h&gt;
+#import &lt;ReactiveViewModel/ReactiveViewModel.h&gt;
+#import &lt;Masonry/Masonry.h&gt;
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark - View life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self prepareDatas];
+    [self customizeDemand];
+    [self addSubviews];
+    [self makeConstraints];
+    [self bindReactiveSignals];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
+#pragma mark - viewDidLoad
+
+- (void)customizeDemand {
     
-    [self prepareUserInterface];
 }
 
-- (void)prepareDatas {
-
+- (void)addSubviews {
+    
 }
 
-- (void)prepareUserInterface {
-    &lt;#cursor#&gt;
+- (void)makeConstraints {
+    
 }
 
-#pragma mark -
+- (void)bindReactiveSignals {
+    
+}
+
+#pragma mark - Accessor
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4E8106D2-6854-4627-96FA-F189E44251B3</string>

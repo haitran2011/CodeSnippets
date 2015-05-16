@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cellInit`</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import &lt;Masonry/Masonry.h&gt;
+#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
+NSString * const &lt;#cellIdentifier#&gt; = &lt;#cellIdentifier#&gt;;
+
+@interface &lt;#Cell#&gt; ()
+@end
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (!self) {
+        return nil;
+    }
+    
+    [self addSubviews];
+    
+    [self makeConstraints];
+    
+    [self bindReactiveSignals];
+    
+    return self;
+}
+
+- (void)addSubviews {
+
+}
+
+- (void)makeConstraints {
+
+}
+
+- (void)bindReactiveSignals {
+
+}
+
+#pragma mark -  Configure data
+
+- (void)configureData:(id)data {
+
+}
+
+#pragma mark -  Accessor
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>50EE8609-02B8-48DB-A8CE-42F8602375BE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Cell Init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
