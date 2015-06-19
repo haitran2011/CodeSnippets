@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cellInit`</string>
+	<string>rock`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#import &lt;Masonry/Masonry.h&gt;
-#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
-NSString * const &lt;#cellIdentifier#&gt; = &lt;#cellIdentifier#&gt;;
+	<string>#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
+#import &lt;ReactiveCocoa/RACEXTScope.h&gt;
+#import &lt;ReactiveViewModel/ReactiveViewModel.h&gt;
+#import &lt;Masonry/Masonry.h&gt;
 
-@interface &lt;#Cell#&gt; ()
-@end
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (!self) {
         return nil;
     }
@@ -41,24 +39,19 @@ NSString * const &lt;#cellIdentifier#&gt; = &lt;#cellIdentifier#&gt;;
 
 }
 
-#pragma mark -  Configure data
-
-- (void)configureData:(id)data {
-
-}
-
-#pragma mark -  Accessor
-
+#pragma mark - Accessor
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>50EE8609-02B8-48DB-A8CE-42F8602375BE</string>
+	<string>63CB82FE-3241-4BF3-99AF-41C65B88D84B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView init</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Cell Init</string>
+	<string>UIView init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

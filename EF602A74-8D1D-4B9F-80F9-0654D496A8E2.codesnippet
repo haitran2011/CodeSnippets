@@ -9,11 +9,14 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static const void *&lt;#AssociateKey#&gt; = &amp;&lt;#AssociateKey#&gt;;
-    
-[self willChangeValueForKey:@"&lt;#AssociateKey#&gt;"];
-objc_setAssociatedObject(self, &lt;#AssociateKey#&gt;, &lt;#object#&gt;, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-[self didChangeValueForKey:@"&lt;#AssociateKey#&gt;"];</string>
+	<string>NSString *key = NSStringFromSelector(_cmd);
+[self willChangeValueForKey:key];
+objc_setAssociatedObject(self,
+                         &amp;&lt;#key#&gt;,
+                         &lt;#value#&gt;,
+                         OBJC_ASSOCIATION_RETAIN_NONATOMI);
+[self didChangeValueForKey:key];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EF602A74-8D1D-4B9F-80F9-0654D496A8E2</string>
 	<key>IDECodeSnippetLanguage</key>
