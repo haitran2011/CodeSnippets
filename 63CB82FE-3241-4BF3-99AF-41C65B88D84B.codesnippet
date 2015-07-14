@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>rock`</string>
+	<string>@vi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -48,10 +48,10 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>UIView init</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIView init</string>
+	<string>@view_init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

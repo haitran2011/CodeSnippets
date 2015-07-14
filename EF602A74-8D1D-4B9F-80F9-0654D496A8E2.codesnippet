@@ -3,26 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>objc_setAssociate`</string>
+	<string>@setter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSString *key = NSStringFromSelector(_cmd);
-[self willChangeValueForKey:key];
+	<string>[self willChangeValueForKey:&lt;#AssociateKey#&gt;];
 objc_setAssociatedObject(self,
-                         &amp;&lt;#key#&gt;,
+                         &amp;&lt;#AssociateKey#&gt;,
                          &lt;#value#&gt;,
                          OBJC_ASSOCIATION_RETAIN_NONATOMI);
-[self didChangeValueForKey:key];
-</string>
+[self didChangeValueForKey:key];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EF602A74-8D1D-4B9F-80F9-0654D496A8E2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>objc_setAssociatedObject</string>
+	<string>@setter</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

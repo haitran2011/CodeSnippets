@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>objc_getAssociated`</string>
+	<string>@getter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>return objc_getAssociatedObject(self, &amp;&lt;#AssociateKey#&gt;);</string>
+	<string>return objc_getAssociatedObject(self, &amp;AssociateKey);</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4AA7E0CC-119C-4282-9870-0C077D9D842E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>objc_getAssociatedObject</string>
+	<string>@getter</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>frame`</string>
+	<string>@frame</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
@@ -13,14 +13,13 @@
         CGRect frame = &lt;# view #&gt;.frame;
         &lt;# ... #&gt;
         frame;
-    });
-</string>
+    });</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2C3B43FF-6C69-4BB7-9362-5D0E4C93221A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View frame</string>
+	<string>@view_frame</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

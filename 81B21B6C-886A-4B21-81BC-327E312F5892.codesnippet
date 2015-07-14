@@ -3,22 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>prepareUserInterface`</string>
+	<string>@respondsToSelector</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)prepareUserInterface {
-    &lt;#corsor#&gt;
-}
-</string>
+	<string>#pragma mark - respondsToSelector
+
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    printf("SELECTOR: %s\n", [NSStringFromSelector(aSelector) UTF8String]);
+    return [super respondsToSelector:aSelector];
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>81B21B6C-886A-4B21-81BC-327E312F5892</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Prepare User interface</string>
+	<string>@respondsToSelector</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

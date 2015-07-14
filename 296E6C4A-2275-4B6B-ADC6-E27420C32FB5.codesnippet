@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dispatch_async`</string>
+	<string>@pw</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>       dispatch_async(dispatch_get_main_queue(), ^{
-           &lt;#cursor#&gt;
-       });</string>
+	<string>@property (nonatomic, weak) &lt;#type#&gt; &lt;#name#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6B140129-D449-4C10-9DC9-BB7AD92997F7</string>
+	<string>296E6C4A-2275-4B6B-ADC6-E27420C32FB5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>dispatch_async</string>
+	<string>@weak_property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
