@@ -3,19 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mark</string>
+	<string>@viewModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - &lt;#mark#&gt;</string>
+	<string>- (&lt;#Class#&gt; *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [&lt;#Class#&gt; new];
+    }
+    
+    return _viewModel;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3C4B3A72-1953-4244-946C-F9B5FE4A5199</string>
+	<string>D50FBDD9-DFF2-4C31-BA9B-D48348940941</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#mark</string>
+	<string>@viewModel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

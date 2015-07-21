@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (void)dealloc {
-    NSLog(@"%s", __FUNCTION__);
+    NSLog(@"~~~~~~~~~~~%s~~~~~~~~~~~", __FUNCTION__);
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>36BFE7C8-CDDF-499B-8052-F3F21E0887AA</string>

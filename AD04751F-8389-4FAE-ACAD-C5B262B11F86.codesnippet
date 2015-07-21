@@ -18,28 +18,35 @@
     NSLog(@"%s", __FUNCTION__);
 }
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (!self) {
+        return nil;
+    }
+    
+    [self unownedInitialize];
+    
+    return self;
+}
+
+- (void)unownedInitialize {
+    
+}
+
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self customizeDemand];
+    [self customizeDepth];
     [self addSubviews];
     [self makeConstraints];
     [self bindReactiveSignals];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-
 #pragma mark - viewDidLoad
 
-- (void)customizeDemand {
+- (void)customizeDepth {
     
 }
 
@@ -55,10 +62,9 @@
     
 }
 
-#pragma mark - Accessor
-</string>
+#pragma mark - Accessor</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4E8106D2-6854-4627-96FA-F189E44251B3</string>
+	<string>AD04751F-8389-4FAE-ACAD-C5B262B11F86</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>

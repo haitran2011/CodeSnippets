@@ -6,12 +6,12 @@
 	<string>@ss</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) strongSelf = weakSelf;</string>
+	<string>__strong typeof(weak_self) strong_self = weak_self;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3A871A07-0E00-48DE-8E9A-6A9D8E2E2ED6</string>
+	<string>8299C91B-F9BC-4FEA-B7F9-414F1563A0E2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>

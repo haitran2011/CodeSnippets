@@ -3,19 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mark</string>
+	<string>@@initWithNibName</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - &lt;#mark#&gt;</string>
+	<string>- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (!self) {
+        return nil;
+    }
+    
+    [self unownedInitialize];
+    
+    return self;
+}
+
+- (void)unownedInitialize {
+    &lt;#cursor#&gt;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3C4B3A72-1953-4244-946C-F9B5FE4A5199</string>
+	<string>362757F0-7C64-4B2D-BE17-8ADFF5C2CB7F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#mark</string>
+	<string>@initWithNibName</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
