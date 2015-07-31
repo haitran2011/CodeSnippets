@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@dispatch_async</string>
+	<string>dispatch_async</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        &lt;#statements#&gt;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // 主线程
-            
-        });
+	<string>dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    &lt;#statements#&gt;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 主线程
+        
     });
+});
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0DB98704-3BEC-4745-86B4-DADD36A624B7</string>

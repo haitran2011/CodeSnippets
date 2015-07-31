@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@ci</string>
+	<string>ci</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -11,7 +11,8 @@
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;Masonry/Masonry.h&gt;
 #import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
-NSString * const &lt;#cellIdentifier#&gt; = &lt;#cellIdentifier#&gt;;
+
+NSString * const k&lt;#CellName#&gt;Identifier = &lt;#cellIdentifier#&gt;;
 
 @interface &lt;#Cell#&gt; ()
 @end

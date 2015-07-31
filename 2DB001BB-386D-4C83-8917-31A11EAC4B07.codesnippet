@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@didReceiveMemoryWarning</string>
+	<string>didReceiveMemoryWarning</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)didReceiveMemoryWarning {
+	<string>#pragma mark - didReceiveMemoryWarning
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
     if (!self.isViewLoaded || self.view.window) {
@@ -24,7 +26,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@ didReceiveMemoryWarning</string>
+	<string>@didReceiveMemoryWarning</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,28 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>singleton</string>
+	<string>nil</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (&lt;#ClassType#&gt; *)sharedInstance {
-    static dispatch_once_t pred;
-    static &lt;#ClassType#&gt; *singleton = nil;
-    
-    dispatch_once(&amp;pred, ^{
-        singleton = [&lt;#ClassType#&gt; new];
-    });
-    
-    return singleton;
-}</string>
+	<string>self.&lt;#prperty#&gt; = nil;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C30A00D4-9AF0-43C1-A9FF-CD55861920F1</string>
+	<string>97AEF98B-FCD0-4583-8638-574119FDC1F7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@singleton</string>
+	<string>@nil</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

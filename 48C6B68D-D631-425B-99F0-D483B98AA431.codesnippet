@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@dispatch_barrier_async</string>
+	<string>dispatch_barrier_async</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    dispatch_queue_t queue = dispatch_queue_create("com.foobar.moch", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        &lt;#task_one#&gt;
-    });
-    dispatch_async(queue, ^{
-        &lt;#task_two#&gt;
-    });
-    dispatch_barrier_async(queue, ^{
-        &lt;#task_barrier#&gt;
-    });
-    dispatch_async(queue, ^{
-        &lt;#task_last#&gt;
-    });
+	<string>dispatch_queue_t queue = dispatch_queue_create("com.foobar.moch", DISPATCH_QUEUE_CONCURRENT);
+dispatch_async(queue, ^{
+    &lt;#task_one#&gt;
+});
+dispatch_async(queue, ^{
+    &lt;#task_two#&gt;
+});
+dispatch_barrier_async(queue, ^{
+    &lt;#task_barrier#&gt;
+});
+dispatch_async(queue, ^{
+    &lt;#task_last#&gt;
+});
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>48C6B68D-D631-425B-99F0-D483B98AA431</string>

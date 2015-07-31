@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@string</string>
+	<string>str</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSLocalizedString(@"&lt;#Message#&gt;", &lt;#Comment#&gt;)</string>
+	<string>NSLocalizedString(@"&lt;#Message#&gt;", nil)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EDB1875E-D2AD-496B-A3BB-B248190CBF43</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@respondsToSelector</string>
+	<string>respondsToSelector</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -11,10 +11,14 @@
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma mark - respondsToSelector
 
+#if DEBUG
 - (BOOL)respondsToSelector:(SEL)aSelector {
-    printf("SELECTOR: %s\n", [NSStringFromSelector(aSelector) UTF8String]);
+    printf("FILE: %s | SELECTOR: %s\n",
+           [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],
+           [NSStringFromSelector(aSelector) UTF8String]);
     return [super respondsToSelector:aSelector];
-}</string>
+}
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>81B21B6C-886A-4B21-81BC-327E312F5892</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UICollectionView *)collectionView {
+    @weakify(self);
+    if (!_collectionView) {
+        @strongify(self);
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
+        _collectionView.backgroundColor = kWhiteColor;
+        [_collectionView registerClass:&lt;#(__unsafe_unretained Class)#&gt; forCellWithReuseIdentifier:&lt;#(NSString *)#&gt;];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self.arrayDataSource;
+    }
+    
+    return _collectionView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>72C7E9A8-4416-4099-B69A-998C5B8E56D6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>@collectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

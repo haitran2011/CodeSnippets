@@ -3,28 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>singleton</string>
+	<string>arrayDataSource</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (&lt;#ClassType#&gt; *)sharedInstance {
-    static dispatch_once_t pred;
-    static &lt;#ClassType#&gt; *singleton = nil;
+	<string>- (CHXArrayDataSource *)arrayDataSource {
+    @weakify(self);
+    if (!_arrayDataSource) {
+        _arrayDataSource = [[CHXArrayDataSource alloc] initWithDataArrayBlock:^NSArray *{
+            @strongify(self);
+        } cellReuseIdentifierForIndexPath:^NSString *(NSIndexPath *indexPath) {
+
+        } cellConfigureBlock:^(id cell, id item) {
+            [cell configureData:item];
+        }];
+    }
     
-    dispatch_once(&amp;pred, ^{
-        singleton = [&lt;#ClassType#&gt; new];
-    });
-    
-    return singleton;
-}</string>
+    return _arrayDataSource;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C30A00D4-9AF0-43C1-A9FF-CD55861920F1</string>
+	<string>27F2510A-C6F0-4037-86FC-63998EC86A1F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@singleton</string>
+	<string>@arrayDataSource</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

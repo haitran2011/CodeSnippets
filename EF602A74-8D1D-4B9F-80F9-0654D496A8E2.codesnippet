@@ -3,18 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@setter</string>
+	<string>setter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[self willChangeValueForKey:&lt;#AssociateKey#&gt;];
+	<string>static const void * &lt;#property_name#&gt; = @"&lt;#property_name#&gt;";
+
+[self willChangeValueForKey:(__bridge NSString *)(&lt;#property_name#&gt;)];
 objc_setAssociatedObject(self,
-                         &amp;&lt;#AssociateKey#&gt;,
-                         &lt;#value#&gt;,
-                         OBJC_ASSOCIATION_RETAIN_NONATOMI);
-[self didChangeValueForKey:key];</string>
+                         &lt;#property_name#&gt;,
+                         &lt;#property#&gt;,
+                         OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+[self didChangeValueForKey:(__bridge NSString *)(&lt;#property_name#&gt;)];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EF602A74-8D1D-4B9F-80F9-0654D496A8E2</string>
 	<key>IDECodeSnippetLanguage</key>

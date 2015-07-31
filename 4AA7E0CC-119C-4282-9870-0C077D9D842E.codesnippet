@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@getter</string>
+	<string>getter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>return objc_getAssociatedObject(self, &amp;AssociateKey);</string>
+	<string>return objc_getAssociatedObject(self, &lt;#property_name#&gt;);</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4AA7E0CC-119C-4282-9870-0C077D9D842E</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -3,15 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@dealloc</string>
+	<string>dealloc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)dealloc {
+	<string>#if DEBUG
+- (void)dealloc {
     NSLog(@"~~~~~~~~~~~%s~~~~~~~~~~~", __FUNCTION__);
-}</string>
+}
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>36BFE7C8-CDDF-499B-8052-F3F21E0887AA</string>
 	<key>IDECodeSnippetLanguage</key>
