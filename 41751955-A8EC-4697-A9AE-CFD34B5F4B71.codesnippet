@@ -3,24 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lineSpacing</string>
+	<string>delegate_tableView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = &lt;#lineSpacing#&gt;;
-    
-    NSDictionary *attributes = @{NSFontAttributeName:&lt;#font#&gt;], NSParagraphStyleAttributeName:paragraphStyle};
-    label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];
+	<string>- (&lt;#class#&gt; *)delegate {
+    if (!_delegate) {
+        _delegate = [[&lt;#class#&gt; alloc] initWithTableView:self.tableView];
+    }
+    return _delegate;
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A9EADE17-B29F-47A5-A558-C31AD03A5AF1</string>
+	<string>41751955-A8EC-4697-A9AE-CFD34B5F4B71</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@lineSpacing</string>
+	<string>@delegate_tableView_property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

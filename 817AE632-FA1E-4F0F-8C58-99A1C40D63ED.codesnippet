@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lineSpacing</string>
+	<string>dataSource_collectionView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = &lt;#lineSpacing#&gt;;
-    
-    NSDictionary *attributes = @{NSFontAttributeName:&lt;#font#&gt;], NSParagraphStyleAttributeName:paragraphStyle};
-    label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];
-</string>
+	<string>- (&lt;#Class#&gt; *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[&lt;#Class#&gt; alloc] initWithCollectionView:self.collectionView];
+    }
+    return _dataSource;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A9EADE17-B29F-47A5-A558-C31AD03A5AF1</string>
+	<string>817AE632-FA1E-4F0F-8C58-99A1C40D63ED</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@lineSpacing</string>
+	<string>@dataSource_collectionView_property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
