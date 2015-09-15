@@ -12,7 +12,7 @@
 	<string>#import &lt;Masonry/Masonry.h&gt;
 #import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
 
-NSString * const k&lt;#CellName#&gt;Identifier = @"&lt;#cellIdentifier#&gt;";
+NSString * const CHX&lt;#CellName#&gt;Identifier = @"&lt;#cellIdentifier#&gt;";
 
 @interface &lt;#Cell#&gt; ()
 @end
