@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import ReactiveCocoa
+
+class &lt;#VC#&gt;: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupUserInterface()
+        setupReactiveCocoa()
+    }
+}
+
+extension &lt;#VC#&gt; {
+    private func setupUserInterface() {
+        
+    }
+    private func setupReactiveCocoa() {
+        
+    }
+}
+
+extension &lt;#VC#&gt; {
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CA7AE118-A57A-4D27-A604-C57D4738FC54</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>VC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>VC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
