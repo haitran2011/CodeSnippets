@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vi</string>
+	<string>view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
@@ -20,23 +20,18 @@
         return nil;
     }
     
-    [self addSubviews];
-    [self makeConstraints];
-    [self bindReactiveSignals];
+    [self setupUserInterface];
+    [self setupReactiveCocoa];
     
     return self;
 }
 
-- (void)addSubviews {
-
+- (void)setupUserInterface {
+    
 }
 
-- (void)makeConstraints {
-
-}
-
-- (void)bindReactiveSignals {
-
+- (void)setupReactiveCocoa {
+    
 }
 
 #pragma mark - Accessor
@@ -45,10 +40,8 @@
 	<string>63CB82FE-3241-4BF3-99AF-41C65B88D84B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>UIView init</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@view_init</string>
+	<string>UIView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -16,10 +16,8 @@
 	<string>C55490AB-40E6-4863-91E7-41205C6797C5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>TCDelegate.init-UICollectionView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDelegate.init-UICollectionView</string>
+	<string>TCDelegate.init-UICollectionView-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

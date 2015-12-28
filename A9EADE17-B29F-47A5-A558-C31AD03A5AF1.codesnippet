@@ -9,18 +9,17 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = &lt;#lineSpacing#&gt;;
-    
-    NSDictionary *attributes = @{NSFontAttributeName:&lt;#font#&gt;], NSParagraphStyleAttributeName:paragraphStyle};
-    label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];
-</string>
+	<string>NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+paragraphStyle.lineSpacing = &lt;#lineSpacing#&gt;;
+
+NSDictionary *attributes = @{NSFontAttributeName:&lt;#font#&gt;], NSParagraphStyleAttributeName:paragraphStyle};
+&lt;#label#&gt;.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A9EADE17-B29F-47A5-A558-C31AD03A5AF1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@lineSpacing</string>
+	<string>Text-line-spacing</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

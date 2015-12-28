@@ -16,10 +16,8 @@
 	<string>0FFBB3C3-D09C-443B-ADA6-E69282C23CB3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>TCDataSource.init-UITableView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDataSource.init-UITableView</string>
+	<string>TCDataSource.init-UITableView-init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

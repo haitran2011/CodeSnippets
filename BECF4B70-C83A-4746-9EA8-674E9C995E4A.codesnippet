@@ -9,17 +9,17 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    SystemSoundID soundID;
-    NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"alertsound" ofType:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:strSoundFile],&amp;soundID;);
-    AudioServicesPlaySystemSound(soundID);
+	<string>SystemSoundID soundID;
+NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"alertsound" ofType:@"wav"];
+AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:strSoundFile],&amp;soundID;);
+AudioServicesPlaySystemSound(soundID);
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BECF4B70-C83A-4746-9EA8-674E9C995E4A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@sound</string>
+	<string>sound.init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

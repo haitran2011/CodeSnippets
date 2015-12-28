@@ -16,10 +16,8 @@
 	<string>3ED84E60-8CC2-45E7-B740-123B8A96EE0E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>TCDelegate.ini-UITableView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDelegate.ini-UITableView</string>
+	<string>TCDelegate.ini-UITableView-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

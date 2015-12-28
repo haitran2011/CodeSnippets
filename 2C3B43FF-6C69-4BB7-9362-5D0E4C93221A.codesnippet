@@ -9,17 +9,17 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    &lt;# view #&gt;.frame = ({
-        CGRect frame = &lt;# view #&gt;.frame;
-        &lt;# ... #&gt;
-        frame;
-    });</string>
+	<string>&lt;# view #&gt;.frame = ({
+    CGRect frame = &lt;# view #&gt;.frame;
+    &lt;# ... #&gt;
+    frame;
+});</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2C3B43FF-6C69-4BB7-9362-5D0E4C93221A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@view_frame</string>
+	<string>view frame</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

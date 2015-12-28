@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ci</string>
+	<string>cell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;Masonry/Masonry.h&gt;
 #import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
 
-NSString * const CHX&lt;#CellName#&gt;Identifier = @"&lt;#cellIdentifier#&gt;";
+NSString * const &lt;#Cell#&gt;Identifier = @"&lt;#Cell#&gt;";
 
 @interface &lt;#Cell#&gt; ()
 @end
@@ -23,23 +23,18 @@ NSString * const CHX&lt;#CellName#&gt;Identifier = @"&lt;#cellIdentifier#&gt;";
         return nil;
     }
     
-    [self addSubviews];
-    [self makeConstraints];
-    [self bindReactiveSignals];
+    [self setupUserInterface];
+    [self setupReactiveCocoa];
     
     return self;
 }
 
-- (void)addSubviews {
-
+- (void)setupUserInterface {
+    
 }
 
-- (void)makeConstraints {
-
-}
-
-- (void)bindReactiveSignals {
-
+- (void)setupReactiveCocoa {
+    
 }
 
 #pragma mark -  Configure data
@@ -56,7 +51,7 @@ NSString * const CHX&lt;#CellName#&gt;Identifier = @"&lt;#cellIdentifier#&gt;";
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@ci</string>
+	<string>Cell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

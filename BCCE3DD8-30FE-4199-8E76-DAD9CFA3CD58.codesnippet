@@ -27,10 +27,8 @@
 	<string>BCCE3DD8-30FE-4199-8E76-DAD9CFA3CD58</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>UITableView.init</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITableView.init</string>
+	<string>UITableView.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

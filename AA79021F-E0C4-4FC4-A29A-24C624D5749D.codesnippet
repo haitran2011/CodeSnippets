@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vdl</string>
+	<string>vc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
 #import &lt;ReactiveCocoa/RACEXTScope.h&gt;
 #import &lt;ReactiveViewModel/ReactiveViewModel.h&gt;
 #import &lt;Masonry/Masonry.h&gt;
+
 
 - (void)dealloc {
     NSLog(@"%s", __FUNCTION__);
@@ -38,40 +39,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self customizeDepth];
-    [self addSubviews];
-    [self makeConstraints];
-    [self bindReactiveSignals];
+    [self setupUserInterface];
+    [self setupReactiveCocoa];
 }
 
 #pragma mark - viewDidLoad
 
-- (void)customizeDepth {
+- (void)setupUserInterface {
     
 }
 
-- (void)addSubviews {
+- (void)setupReactiveCocoa {
     
 }
 
-- (void)makeConstraints {
-    
-}
-
-- (void)bindReactiveSignals {
-    
-}
-
-#pragma mark - Accessor</string>
+#pragma mark - Accessor
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AD04751F-8389-4FAE-ACAD-C5B262B11F86</string>
+	<string>AA79021F-E0C4-4FC4-A29A-24C624D5749D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@viewDidLoad</string>
+	<string>VC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

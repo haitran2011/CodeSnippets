@@ -3,22 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ps</string>
+	<string>label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>lazy var &lt;#nameLabel#&gt;: UILabel = {
+    let &lt;#nameLabel#&gt; = UILabel()
+    &lt;#nameLabel#&gt;.textColor = CHXBlackColor
+    &lt;#nameLabel#&gt;.font = CHXFontOfSize13
+    return &lt;#nameLabel#&gt;
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>834BBD8B-C682-4226-8EDD-7B83BEA94B10</string>
+	<string>FE05B654-3E44-486B-AC35-7B3BEF9765F8</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strong property</string>
+	<string>UILabel.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

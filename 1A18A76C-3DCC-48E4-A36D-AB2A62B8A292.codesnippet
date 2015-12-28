@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>UIImagePickerController</string>
+	<string>picker</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UIImagePickerController *imagePickerVC = [[UIImagePickerController alloc]init];
-    imagePickerVC.delegate = self;
-    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickerVC.allowsEditing = YES;
-    imagePickerVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
+	<string>UIImagePickerController *imagePickerVC = [[UIImagePickerController alloc]init];
+imagePickerVC.delegate = self;
+imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+imagePickerVC.allowsEditing = YES;
+imagePickerVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+[self presentViewController:imagePickerVC animated:YES completion:nil];
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1A18A76C-3DCC-48E4-A36D-AB2A62B8A292</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>@UIImagePickerController</string>
+	<string>UIImagePickerController.init-Library</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -17,8 +17,6 @@ class var sharedInstance: &lt;#Class#&gt; {
 	<string>11C4DB3E-A098-4159-83CC-F0512E3D0E99</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Signletion</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Signletion</string>
 	<key>IDECodeSnippetUserSnippet</key>
