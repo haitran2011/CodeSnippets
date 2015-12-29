@@ -10,11 +10,11 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let &lt;#ImageView#&gt; = UIImageView()
-    &lt;#ImageView#&gt;.contentMode = .ScaleAspectFill
-    &lt;#ImageView#&gt;.clipsToBounds = true
-    &lt;#ImageView#&gt;.backgroundColor = CHXLightGrayColor
-    return &lt;#ImageView#&gt;
+    let imageView = UIImageView()
+    imageView.contentMode = .ScaleAspectFill
+    imageView.clipsToBounds = true
+    imageView.backgroundColor = CHXLightGrayColor
+    return imageView
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E79DB918-7946-447D-8497-472C015A6157</string>
@@ -25,6 +25,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

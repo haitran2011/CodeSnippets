@@ -3,27 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>label</string>
+	<string>button</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#label#&gt;: UILabel = {
-    let label = UILabel()
-    label.textColor = CHXBlackColor
-    label.font = CHXFontOfSize13
-    return label
+	<string>let &lt;#button#&gt;: UIButton = {
+    let button = UIButton(type: .System)
+    button.chx_setBorderWidth(&lt;#T##width: CGFloat##CGFloat#&gt;, color: &lt;#T##UIColor!#&gt;)
+    button.chx_setTitleColor(&lt;#T##color: UIColor!##UIColor!#&gt;)
+    button.chx_setTitle(&lt;#T##title: String!##String!#&gt;)
+    button.chx_setBackgroundImage(&lt;#T##image: UIImage!##UIImage!#&gt;)
+    return button
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FE05B654-3E44-486B-AC35-7B3BEF9765F8</string>
+	<string>DD0FDAC4-B2C9-4829-BF3A-F264A50E8A57</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UILabel.init-lazy</string>
+	<string>UIButton.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
