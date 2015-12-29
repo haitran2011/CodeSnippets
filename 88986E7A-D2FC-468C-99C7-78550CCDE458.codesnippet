@@ -6,21 +6,21 @@
 	<string>delegate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var delegate: &lt;#TCDelegate#&gt; = {
+	<string>let delegate: &lt;#TCDelegate#&gt; = {
     &lt;#TCDelegate#&gt;(collectionView: self.collectionView)
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C55490AB-40E6-4863-91E7-41205C6797C5</string>
+	<string>88986E7A-D2FC-468C-99C7-78550CCDE458</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDelegate.init-UICollectionView-lazy</string>
+	<string>TCDelegate.init-UICollectionView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

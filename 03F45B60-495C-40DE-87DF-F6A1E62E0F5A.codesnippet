@@ -9,8 +9,8 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var dataSource: TCDataSource = {
-    &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
+	<string>lazy var dataSource: &lt;#TCDataSource#&gt; = {
+   &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>03F45B60-495C-40DE-87DF-F6A1E62E0F5A</string>
@@ -21,6 +21,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

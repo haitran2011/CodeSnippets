@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var tableView: UITableView = {
+	<string>let tableView: UITableView = {
     let tableView = UITableView(frame: CGRectZero, style: .Plain)
     tableView.delegate = self.delegate
     tableView.dataSource = self.dataSource
@@ -21,17 +21,16 @@
     tableView.tableFooterView = UIView(frame: CGRectMake(0, 0, 0, CGFloat.min))
 
     return tableView
-}()
-</string>
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BCCE3DD8-30FE-4199-8E76-DAD9CFA3CD58</string>
+	<string>0C10DAE1-0F9E-4EFD-9C25-50C01701988E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITableView.init-lazy</string>
+	<string>UITableView.init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

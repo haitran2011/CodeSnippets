@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>delegate</string>
+	<string>label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var delegate: &lt;#TCDelegate#&gt; = {
-    &lt;#TCDelegate#&gt;(collectionView: self.collectionView)
+	<string>let &lt;#nameLabel#&gt;: UILabel = {
+    let &lt;#nameLabel#&gt; = UILabel()
+    &lt;#nameLabel#&gt;.textColor = CHXBlackColor
+    &lt;#nameLabel#&gt;.font = CHXFontOfSize13
+    return &lt;#nameLabel#&gt;
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C55490AB-40E6-4863-91E7-41205C6797C5</string>
+	<string>AFE31932-196E-4BE2-A8E3-C63B011BD642</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDelegate.init-UICollectionView-lazy</string>
+	<string>UILabel.init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
