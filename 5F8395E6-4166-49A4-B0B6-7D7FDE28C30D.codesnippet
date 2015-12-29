@@ -3,24 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>deinit</string>
+	<string>view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>deinit {
-    debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")
-}</string>
+	<string>lazy var &lt;#View#&gt;: UIView = {
+    let view = UIView()
+    return view
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3D34A547-0D39-414A-ACF3-2A2A588D9B4B</string>
+	<string>5F8395E6-4166-49A4-B0B6-7D7FDE28C30D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>deinit-debugPrint</string>
+	<string>UIView.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
