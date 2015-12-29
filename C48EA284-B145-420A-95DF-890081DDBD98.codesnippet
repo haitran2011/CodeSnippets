@@ -2,29 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iv</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
-    imageView.clipsToBounds = true
-    imageView.backgroundColor = CHXImageBackgroundColor
-    return imageView
+	<string>let viewModel: &lt;#ViewModel#&gt; = {
+    return &lt;#ViewModel#&gt;()
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E79DB918-7946-447D-8497-472C015A6157</string>
+	<string>C48EA284-B145-420A-95DF-890081DDBD98</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImageView.init-lazy</string>
+	<string>ViewModel.init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

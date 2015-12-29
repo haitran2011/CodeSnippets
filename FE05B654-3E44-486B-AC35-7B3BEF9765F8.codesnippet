@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#label#&gt;: UILabel = {
+	<string>lazy var &lt;#Label#&gt;: UILabel = {
     let label = UILabel()
     label.textColor = CHXBlackColor
     label.font = CHXFontOfSize13

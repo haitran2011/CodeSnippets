@@ -3,29 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>button</string>
+	<string>dataSource</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#Button#&gt;: UIButton = {
-    let button = UIButton(type: .System)
-    button.chx_setBorderWidth(&lt;#T##width: CGFloat##CGFloat#&gt;, color: &lt;#T##UIColor!#&gt;)
-    button.chx_setTitleColor(&lt;#T##color: UIColor!##UIColor!#&gt;)
-    button.chx_setTitle(&lt;#T##title: String!##String!#&gt;)
-    button.chx_setBackgroundImage(&lt;#T##image: UIImage!##UIImage!#&gt;)
-    return button
+	<string>let dataSource: &lt;#TCDataSource#&gt; = {
+    &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DD0FDAC4-B2C9-4829-BF3A-F264A50E8A57</string>
+	<string>CCAF28F4-9934-4C40-8CF2-D4303A21ABB2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIButton.init-lazy</string>
+	<string>TCDataSource.init-UICollectionView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

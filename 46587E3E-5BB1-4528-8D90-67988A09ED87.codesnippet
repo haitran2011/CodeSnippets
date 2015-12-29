@@ -13,7 +13,7 @@
     let imageView = UIImageView()
     imageView.contentMode = .ScaleAspectFill
     imageView.clipsToBounds = true
-    imageView.backgroundColor = CHXLightGrayColor
+    imageView.backgroundColor = CHXImageBackgroundColor
     return imageView
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -3,28 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iv</string>
+	<string>log</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
-    imageView.clipsToBounds = true
-    imageView.backgroundColor = CHXImageBackgroundColor
-    return imageView
-}()</string>
+	<string>Logger.info("\(__FILE__):\(__LINE__):\(__FUNCTION__)")</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E79DB918-7946-447D-8497-472C015A6157</string>
+	<string>BB2419BF-82ED-439A-8205-ABB740E3E0C5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImageView.init-lazy</string>
+	<string>Logger</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
