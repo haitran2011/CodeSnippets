@@ -3,23 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>del</string>
+	<string>debug</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-}</string>
+	<string>debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2349B9D5-ECA2-4F0E-9A56-17191B0B0083</string>
+	<string>FD703FE2-F1BF-4A5B-A1EB-DFCF78CB0496</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UICollectionViewDelegate-imp</string>
+	<string>debug print func</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

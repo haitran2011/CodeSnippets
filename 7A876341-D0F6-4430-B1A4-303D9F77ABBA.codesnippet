@@ -2,22 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ds</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let dataSource: &lt;#TCDataSource#&gt; = {
-    &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
-}()</string>
+	<string>Logger.info("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CCAF28F4-9934-4C40-8CF2-D4303A21ABB2</string>
+	<string>7A876341-D0F6-4430-B1A4-303D9F77ABBA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDataSource.init-UICollectionView</string>
+	<string>Logger-info</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

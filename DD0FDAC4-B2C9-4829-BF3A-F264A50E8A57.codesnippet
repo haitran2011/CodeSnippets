@@ -9,7 +9,7 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#Button#&gt;: UIButton = {
+	<string>lazy var &lt;#Button#&gt;: UIButton = {
     let button = UIButton(type: .System)
     button.chx_setBorderWidth(&lt;#T##width: CGFloat##CGFloat#&gt;, color: &lt;#T##UIColor!#&gt;)
     button.chx_setTitleColor(&lt;#T##color: UIColor!##UIColor!#&gt;)

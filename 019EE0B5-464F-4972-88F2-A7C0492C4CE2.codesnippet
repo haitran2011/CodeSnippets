@@ -3,19 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>info</string>
+	<string>reload</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>"\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)"</string>
+	<string>func reloadCollectionViewData(globalDataMetric: TCGlobalDataMetric) {
+    dataSource.globalDataMetric = globalDataMetric
+    collectionView.reloadData()
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>626CCDFA-9929-441A-8292-A3CE29B3BE1B</string>
+	<string>019EE0B5-464F-4972-88F2-A7C0492C4CE2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Logger</string>
+	<string>Reload collectionView data func</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

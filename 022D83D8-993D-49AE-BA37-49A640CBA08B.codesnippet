@@ -6,18 +6,30 @@
 	<string>ds</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let dataSource: &lt;#TCDataSource#&gt; = {
-    &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
-}()</string>
+	<string>class ProductsListDataSource: TCDataSource, TCDataSourceProtocol {
+    func registerReusableCell() {
+       
+    }
+    
+    func reusableCellIdentifierForIndexPath(indexPath: NSIndexPath!) -&gt; String! {
+        return &lt;#Cell#&gt;.identifier
+    }
+    
+    func loadData(data: AnyObject!, forReusableCell cell: AnyObject!) {
+        let collectionViewCell =  cell as! &lt;#CollectionViewOrTableViewCell#&gt;
+        collectionViewCell.configureData(data)
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CCAF28F4-9934-4C40-8CF2-D4303A21ABB2</string>
+	<string>022D83D8-993D-49AE-BA37-49A640CBA08B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDataSource.init-UICollectionView</string>
+	<string>TCDataSource</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

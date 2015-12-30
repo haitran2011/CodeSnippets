@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var globalDataMetric: MutableProperty&lt;TCGlobalDataMetric&gt; = {
+        self.fetchDataAction.rac_values(TCGlobalDataMetric(sectionDataMetrics: []))
+    }()
+    
+    lazy var error: MutableProperty&lt;NSError&gt; = {
+        self.fetchDataAction.rac_errors(NSError.defaultError())
+    }()
+    
+    private lazy var fetchDataAction: Action&lt;Void, TCGlobalDataMetric, NSError&gt; = {
+        return Action {
+            // FIXME:
+            &lt;#API#&gt;().asyncProducer
+                .map { (result) -&gt; TCGlobalDataMetric in
+                    let sectionDataMetric = TCSectionDataMetric(itemsData: [result])
+                    let globalDataMetric = TCGlobalDataMetric(sectionDataMetrics: [sectionDataMetric])
+                    return globalDataMetric
+                }
+        }
+    }()
+    
+    func fetchData() {
+        fetchDataAction.apply().start()
+    }
+    
+    deinit {
+        debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D2E6B0B5-9D08-4911-AD70-EE6A2BFE57E9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,21 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ds</string>
+	<string>ob</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let dataSource: &lt;#TCDataSource#&gt; = {
-    &lt;#TCDataSource#&gt;(collectionView: self.collectionView)
-}()</string>
+	<string>viewModel.globalDataMetric.producer
+    .skipOnce()
+    .observeOnUIScheduler()
+    .startWithNext { [weak self] (globalDataMetric) -&gt; () in
+        &lt;#code#&gt;
+}
+viewModel.error.producer
+    .skipOnce()
+    .observeOnUIScheduler()
+    .startWithNext { [weak self] (error) -&gt; () in
+        debugPrint(error)
+        self?.presentError((error))
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CCAF28F4-9934-4C40-8CF2-D4303A21ABB2</string>
+	<string>3B98A0BC-F8E8-424B-BC41-B68CFC52BBEC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TCDataSource.init-UICollectionView</string>
+	<string>observe view model globalDataMetric &amp; error producer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

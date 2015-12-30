@@ -3,23 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>del</string>
+	<string>reload</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - UICollectionViewDelegate
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+	<string> private func reloadTableViewData(globalDataMetric: TCGlobalDataMetric) {
+        dataSource.globalDataMetric = globalDataMetric
+        tableView.reloadData()
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2349B9D5-ECA2-4F0E-9A56-17191B0B0083</string>
+	<string>6AF51E5C-77BD-4B87-9F69-8FA17766FF9D</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UICollectionViewDelegate-imp</string>
+	<string>Reload tableView data func</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

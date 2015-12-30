@@ -10,14 +10,21 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>private func setupReactiveCocoa() {
-        
+    viewModel.globalDataMetric.producer
+        .skipOnce()
+        .observeOnUIScheduler()
+        .startWithNext { [weak self] in self?.&lt;#reloadDataFunc#&gt;($0) }
+    viewModel.error.producer
+        .skipOnce()
+        .observeOnUIScheduler()
+        .startWithNext { [weak self] in self?.presentError(($0)) }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5C298783-F8DB-4306-BF29-DD3A881BBBF8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>setupReactiveCocoa</string>
+	<string>RAC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
