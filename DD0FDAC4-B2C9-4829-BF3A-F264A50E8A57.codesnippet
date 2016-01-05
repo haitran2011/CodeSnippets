@@ -11,10 +11,10 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var &lt;#Button#&gt;: UIButton = {
     let button = UIButton(type: .System)
-    button.chx_setBorderWidth(&lt;#T##width: CGFloat##CGFloat#&gt;, color: &lt;#T##UIColor!#&gt;)
-    button.chx_setTitleColor(&lt;#T##color: UIColor!##UIColor!#&gt;)
-    button.chx_setTitle(&lt;#T##title: String!##String!#&gt;)
-    button.chx_setBackgroundImage(&lt;#T##image: UIImage!##UIImage!#&gt;)
+    button.setBorder(width: &lt;#T##CGFloat#&gt;, color: &lt;#T##UIColor#&gt;)
+    button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
+    button.title = &lt;#T##title: String!##String!#&gt;
+    button.backgroundImage = &lt;#T##image: UIImage!##UIImage!#&gt;
     return button
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>cell</string>
+	<string>hf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
@@ -13,22 +13,22 @@
 import ReactiveCocoa
 import SnapKit
 
-class &lt;#UITableViewCell#&gt;: UITableViewCell {
-    static let identifier = "&lt;#UITableViewCell#&gt;"
+class &lt;#TableViewHeaderFooterView#&gt;: UITableViewHeaderFooterView {
+    static let identifier = "&lt;#TableViewHeaderFooterView#&gt;"
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+
         setupUserInterface()
         setupReactiveCocoa()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension &lt;#UITableViewCell#&gt; {
+extension &lt;#TableViewHeaderFooterView#&gt; {
     private func setupUserInterface() {
         
     }
@@ -38,17 +38,17 @@ extension &lt;#UITableViewCell#&gt; {
     }
 }
 
-extension &lt;#UITableViewCell#&gt; {
-    override func configureData(data: AnyObject!) {
+extension &lt;#TableViewHeaderFooterView#&gt; {
+    func configureData(data: AnyObject!) {
         
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F3659328-5147-4BD0-9B18-0F8AFB6BCC48</string>
+	<string>D4764D9C-3FC3-459C-A458-22D408193D06</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITableViewCell</string>
+	<string>UITableViewHeaderFooterView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

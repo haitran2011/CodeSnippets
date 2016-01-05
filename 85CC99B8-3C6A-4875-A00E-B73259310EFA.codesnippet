@@ -3,26 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>button</string>
+	<string>web</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#Button#&gt;: UIButton = {
-    let button = UIButton(type: .System)
-    button.setBorder(width: &lt;#T##CGFloat#&gt;, color: &lt;#T##UIColor#&gt;)
-    button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
-    button.title = &lt;#T##title: String!##String!#&gt;
-    button.backgroundImage = &lt;#T##image: UIImage!##UIImage!#&gt;
-    return button
+	<string>lazy var webView: UIWebView = {
+    let webView = UIWebView()
+    webView.scrollView.backgroundColor = CHXGroupedTableViewBackgroundColor
+    webView.scrollView.scrollsToTop = false
+    webView.scalesPageToFit = true
+    webView.delegate = self
+    return webView
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D721908B-1B53-477F-B63F-90249EF289D7</string>
+	<string>85CC99B8-3C6A-4875-A00E-B73259310EFA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIButton.init</string>
+	<string>UIWebView.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

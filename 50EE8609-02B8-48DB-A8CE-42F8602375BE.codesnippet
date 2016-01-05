@@ -51,7 +51,7 @@ NSString * const &lt;#Cell#&gt;Identifier = @"&lt;#Cell#&gt;";
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Cell</string>
+	<string>UITableViewCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

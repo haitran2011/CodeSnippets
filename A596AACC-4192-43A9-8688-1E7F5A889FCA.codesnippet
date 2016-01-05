@@ -27,8 +27,6 @@ class &lt;#ViewController#&gt;: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRectZero, style: .Plain)
-        tableView.delegate = self.delegate
-        tableView.dataSource = self.dataSource
         tableView.backgroundColor = CHXGroupedTableViewBackgroundColor
         tableView.alwaysBounceVertical = true
         tableView.rowHeight = UITableViewAutomaticDimension
