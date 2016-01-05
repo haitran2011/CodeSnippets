@@ -13,6 +13,7 @@
     let label = UILabel()
     label.textColor = CHXBlackColor
     label.font = CHXFontOfSize13
+    label.lineBreakMode = .ByCharWrapping
     return label
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
