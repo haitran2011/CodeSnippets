@@ -10,11 +10,11 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>override private init(frame: CGRect) {
-    fatalError("Use init(actionHandler:) instead.")
+    fatalError("init(frame:) has not been implemented")
 }
 
 private init() {
-    fatalError("Use init(actionHandler:) instead.")
+    fatalError("init has not been implemented")
 }
 
 required public init?(coder aDecoder: NSCoder) {
