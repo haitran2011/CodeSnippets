@@ -13,7 +13,7 @@
 import ReactiveCocoa
 import SnapKit
 
-class &lt;#VC#&gt;: UIViewController {
+final class &lt;#VC#&gt;: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +22,7 @@ class &lt;#VC#&gt;: UIViewController {
     }
 }
 
-extension &lt;#VC#&gt; {
+private extension &lt;#VC#&gt; {
     private func setupUserInterface() {
         
     }
@@ -31,7 +31,7 @@ extension &lt;#VC#&gt; {
     }
 }
 
-extension &lt;#VC#&gt; {
+private extension &lt;#VC#&gt; {
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

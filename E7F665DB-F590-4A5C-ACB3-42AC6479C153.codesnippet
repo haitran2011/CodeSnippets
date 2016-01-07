@@ -9,22 +9,22 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>override public init(frame: CGRect) {
-    super.init(frame: frame)
-}
+	<string>override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
 
-required public init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-}</string>
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A63558E4-E96B-4106-BD9E-CFF71F85C4B8</string>
+	<string>E7F665DB-F590-4A5C-ACB3-42AC6479C153</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIView-subclass-init</string>
+	<string>UIViewController-subclass-init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

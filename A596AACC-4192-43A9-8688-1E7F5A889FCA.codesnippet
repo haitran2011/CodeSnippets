@@ -12,7 +12,7 @@
 	<string>import ReactiveCocoa
 import SnapKit
 
-class &lt;#ViewController#&gt;: UIViewController {
+final class &lt;#ViewController#&gt;: UIViewController {
     lazy var viewModel: &lt;#ViewModel#&gt; = {
         return &lt;#ViewModel#&gt;()
     }()
@@ -46,7 +46,7 @@ class &lt;#ViewController#&gt;: UIViewController {
     }
 }
 
-extension &lt;#ViewController#&gt; {
+private extension &lt;#ViewController#&gt; {
     private func setupUserInterface() {
         view.addSubview(tableView)
         tableView.snp_makeConstraints { (make) -&gt; Void in
@@ -73,7 +73,7 @@ extension &lt;#ViewController#&gt; {
     }
 }
 
-extension &lt;#ViewController#&gt; {
+private extension &lt;#ViewController#&gt; {
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
