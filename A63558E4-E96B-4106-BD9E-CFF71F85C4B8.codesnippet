@@ -9,11 +9,11 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>override public init(frame: CGRect) {
+	<string>override init(frame: CGRect) {
     super.init(frame: frame)
 }
 
-required public init?(coder aDecoder: NSCoder) {
+required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
