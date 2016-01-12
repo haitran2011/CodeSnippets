@@ -31,7 +31,7 @@ private extension &lt;#VC#&gt; {
     }
 }
 
-private extension &lt;#VC#&gt; {
+extension &lt;#VC#&gt; {
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

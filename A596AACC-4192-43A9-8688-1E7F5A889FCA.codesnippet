@@ -73,7 +73,7 @@ private extension &lt;#ViewController#&gt; {
     }
 }
 
-private extension &lt;#ViewController#&gt; {
+extension &lt;#ViewController#&gt; {
     
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
