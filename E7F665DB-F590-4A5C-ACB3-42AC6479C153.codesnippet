@@ -9,19 +9,25 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
+	<string>convenience init(&lt;#ConvenienceInitializer#&gt;) {
+    
+    self.init(nibName: nil, bundle: nil)
+}
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }</string>
+public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+}
+
+required public init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E7F665DB-F590-4A5C-ACB3-42AC6479C153</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController-subclass-init</string>
+	<string>UIViewController-subclass-convenience-initializer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -18,7 +18,7 @@ final class &lt;#VC#&gt;: UIViewController {
         super.viewDidLoad()
         
         setupUserInterface()
-        setupReactiveCocoa()
+        setupEventsBinding()
     }
 }
 
@@ -26,7 +26,8 @@ private extension &lt;#VC#&gt; {
     private func setupUserInterface() {
         
     }
-    private func setupReactiveCocoa() {
+    
+    private func setupEventsBinding() {
         
     }
 }

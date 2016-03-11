@@ -14,7 +14,7 @@ import SnapKit
 
 final class &lt;#ViewController#&gt;: UIViewController {
     lazy var viewModel: &lt;#ViewModel#&gt; = {
-        return &lt;#ViewModel#&gt;()
+        &lt;#ViewModel#&gt;()
     }()
     
     lazy var dataSource: &lt;#DataSource#&gt; = {
@@ -41,7 +41,7 @@ final class &lt;#ViewController#&gt;: UIViewController {
         super.viewDidLoad()
         
         setupUserInterface()
-        setupReactiveCocoa()
+        setupEventsBinding()
         viewModel.fetchData()
     }
 }
@@ -52,11 +52,11 @@ private extension &lt;#ViewController#&gt; {
         tableView.snp_makeConstraints { (make) -&gt; Void in
             make.edges.equalTo(view)
         }
-        tableView.delegate = self.delegate
-        tableView.dataSource = self.dataSource
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
     }
     
-    private func setupReactiveCocoa() {
+    private func setupEventsBinding() {
         viewModel.globalDataMetric.producer
             .skipOnce()
             .observeOnUIScheduler()

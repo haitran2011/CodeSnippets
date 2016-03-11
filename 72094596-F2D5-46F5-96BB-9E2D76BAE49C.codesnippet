@@ -9,12 +9,9 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private init() {
-    fatalError("init has not been implemented")
-}
-
-override private init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-    fatalError("init(nibName:bundle:) has not been implemented")
+	<string>init(&lt;#CustomInit#&gt;) {
+    
+    super.init(nibName: nil, bundle: nil)
 }
 
 required init?(coder aDecoder: NSCoder) {
@@ -25,7 +22,7 @@ required init?(coder aDecoder: NSCoder) {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController-subclass-init-override</string>
+	<string>UIViewController-subclass-designated-initializer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

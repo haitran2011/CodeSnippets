@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__attribute__((deprecated("use &lt;#selector#&gt; instead")))</string>
+	<string>__attribute__((deprecated("use `&lt;#selector#&gt;` instead.")))</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7DA253B9-44B8-4086-9C38-7CE76B5AE4D8</string>
 	<key>IDECodeSnippetLanguage</key>
