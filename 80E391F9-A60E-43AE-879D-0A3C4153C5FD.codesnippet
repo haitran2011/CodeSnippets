@@ -9,29 +9,29 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -&gt; CGSize {
-        &lt;#code#&gt;
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -&gt; UIEdgeInsets {
-        &lt;#code#&gt;
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
-        &lt;#code#&gt;
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
-        &lt;#code#&gt;
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -&gt; CGSize {
-        &lt;#code#&gt;
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -&gt; CGSize {
-        &lt;#code#&gt;
-    }</string>
+	<string>func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -&gt; CGSize {
+    return CGSizeMake(&lt;#T##width: CGFloat##CGFloat#&gt;, &lt;#T##height: CGFloat##CGFloat#&gt;)
+}
+
+func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -&gt; UIEdgeInsets {
+    return UIEdgeInsetsMake(&lt;#T##top: CGFloat##CGFloat#&gt;, &lt;#T##left: CGFloat##CGFloat#&gt;, &lt;#T##bottom: CGFloat##CGFloat#&gt;, &lt;#T##right: CGFloat##CGFloat#&gt;)
+}
+
+func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+    return &lt;#code#&gt;
+}
+
+func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+    return &lt;#code#&gt;
+}
+
+func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -&gt; CGSize {
+    return CGSizeMake(&lt;#T##width: CGFloat##CGFloat#&gt;, &lt;#T##height: CGFloat##CGFloat#&gt;)
+}
+
+func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -&gt; CGSize {
+    return CGSizeMake(&lt;#T##width: CGFloat##CGFloat#&gt;, &lt;#T##height: CGFloat##CGFloat#&gt;)
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>80E391F9-A60E-43AE-879D-0A3C4153C5FD</string>
 	<key>IDECodeSnippetLanguage</key>

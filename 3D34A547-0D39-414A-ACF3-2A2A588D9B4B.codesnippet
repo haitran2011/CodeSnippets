@@ -9,9 +9,11 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>deinit {
-    debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")
-}</string>
+	<string>#if DEBUG
+deinit {
+    debugPrint("\(#file):\(#line):\(self.dynamicType):\(#function)")
+}
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3D34A547-0D39-414A-ACF3-2A2A588D9B4B</string>
 	<key>IDECodeSnippetLanguage</key>

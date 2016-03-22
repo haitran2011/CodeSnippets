@@ -3,28 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>button</string>
+	<string>debug</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#Button#&gt;: UIButton = {
-    let button = UIButton(type: .System)
-    button.tintColor = CHXWhiteColor
-    button.setBorder(width: &lt;#T##CGFloat#&gt;, color: &lt;#T##UIColor#&gt;)
-    button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
-    button.title = &lt;#T##title: String!##String!#&gt;
-    button.backgroundColor = &lt;#UIColor#&gt;
-    button.addBorderLine(rectEdge: &lt;#T##UIRectEdge#&gt;)
-    return button
-}()</string>
+	<string>#if DEBUG
+
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D721908B-1B53-477F-B63F-90249EF289D7</string>
+	<string>A6274884-E32B-435C-8443-CFB7F64A073B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>DEBUG</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIButton.init</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
