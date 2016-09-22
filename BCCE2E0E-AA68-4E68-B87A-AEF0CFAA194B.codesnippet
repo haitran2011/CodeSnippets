@@ -3,25 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iv</string>
+	<string>undeclared</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
-    imageView.clipsToBounds = true
-    imageView.backgroundColor = AppColor.colors.backgroundPlaceholder
-    return imageView
-}()</string>
+	<string>#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+&lt;#code#&gt;
+#pragma clang diagnostic pop
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E79DB918-7946-447D-8497-472C015A6157</string>
+	<string>BCCE2E0E-AA68-4E68-B87A-AEF0CFAA194B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImageView.init-lazy</string>
+	<string>undeclared-prevent</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

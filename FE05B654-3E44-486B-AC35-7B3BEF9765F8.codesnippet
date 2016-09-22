@@ -11,9 +11,9 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var &lt;#Label#&gt;: UILabel = {
     let label = UILabel()
-    label.textColor = CHXBlackColor
-    label.font = CHXFontOfSize13
-    label.lineBreakMode = .ByCharWrapping
+    label.textColor = Const.Colors.textDefault
+    label.font = CHXFontOfSize15
+    label.lineBreakMode = .ByTruncatingTail
     return label
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -3,25 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iv</string>
+	<string>makee</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
-    imageView.clipsToBounds = true
-    imageView.backgroundColor = AppColor.colors.backgroundPlaceholder
-    return imageView
-}()</string>
+	<string>private func makeEnableSignal() -&gt; SignalProducer&lt;Bool, NoError&gt; {
+    
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E79DB918-7946-447D-8497-472C015A6157</string>
+	<string>34690DE7-D8ED-47AE-A9DD-022903E3BB88</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Make enable signal</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImageView.init-lazy</string>
+	<string>Make enable signal</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

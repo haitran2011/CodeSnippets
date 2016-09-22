@@ -13,7 +13,8 @@
     let tableView = UITableView(frame: CGRectZero, style: .Plain)
     tableView.delegate = self.delegate
     tableView.dataSource = self.dataSource
-    tableView.backgroundColor = CHXGroupedTableViewBackgroundColor
+    tableView.backgroundColor = AppColor.colors.backgroundLight
+    tableView.separatorColor = AppColor.colors.separator
     tableView.alwaysBounceVertical = true
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 44

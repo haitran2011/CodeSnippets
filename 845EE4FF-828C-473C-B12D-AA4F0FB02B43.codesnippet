@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var collectionView: UICollectionView = {
     let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
-    collectionView.backgroundColor = CHXWhiteColor
+    collectionView.backgroundColor = AppColor.colors.backgroundDefault
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.alwaysBounceVertical = true
     collectionView.dataSource = self.dataSource

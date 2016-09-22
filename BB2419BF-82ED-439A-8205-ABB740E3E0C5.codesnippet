@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")</string>
+	<string>debugPrint("\(#file):\(#line):\(self.dynamicType):\(#function)")</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BB2419BF-82ED-439A-8205-ABB740E3E0C5</string>
 	<key>IDECodeSnippetLanguage</key>
