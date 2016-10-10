@@ -3,19 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>debug</string>
+	<string>leak</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")</string>
+	<string>#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+&lt;#code#&gt;
+#pragma clang diagnostic pop
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>FD703FE2-F1BF-4A5B-A1EB-DFCF78CB0496</string>
+	<string>1F59E89F-9584-47E1-96B1-34255FA63E16</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>debug print func</string>
+	<string>leak-prevent</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

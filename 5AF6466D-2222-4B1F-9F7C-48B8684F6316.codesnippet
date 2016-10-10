@@ -3,25 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>iv</string>
+	<string>field`</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
-    let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
-    imageView.clipsToBounds = true
-    imageView.backgroundColor = AppColor.colors.backgroundPlaceholder
-    return imageView
+	<string>lazy var &lt;#TextField#&gt;: UITextField = {
+    let field = PaddingTextField()
+    return field
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E79DB918-7946-447D-8497-472C015A6157</string>
+	<string>5AF6466D-2222-4B1F-9F7C-48B8684F6316</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImageView.init-lazy</string>
+	<string>UITextField</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
