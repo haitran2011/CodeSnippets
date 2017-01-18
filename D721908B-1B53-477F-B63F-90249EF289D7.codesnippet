@@ -15,7 +15,7 @@
     button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
     button.title = &lt;#T##title: String!##String!#&gt;
     button.backgroundColor = &lt;#UIColor#&gt;
-    button.addBorderLine(rectEdge: &lt;#T##UIRectEdge#&gt;)
+    button.addBorderline(for: &lt;#T##UIRectEdge#&gt;)
     return button
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
