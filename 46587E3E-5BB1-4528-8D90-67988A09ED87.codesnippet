@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#ImageView#&gt;: UIImageView = {
     let imageView = UIImageView()
-    imageView.contentMode = .scaleAspectFill
+    imageView.contentMode = .ScaleAspectFill
     imageView.clipsToBounds = true
     return imageView
 }()</string>
