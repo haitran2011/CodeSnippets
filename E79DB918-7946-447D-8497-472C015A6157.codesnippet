@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var &lt;#ImageView#&gt;: UIImageView = {
     let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFill
+    imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
     imageView.backgroundColor = AppColor.colors.backgroundPlaceholder
     return imageView
