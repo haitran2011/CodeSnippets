@@ -13,7 +13,7 @@
     let label = UILabel()
     label.textColor = Const.Colors.textDefault
     label.font = CHXFontOfSize15
-    label.lineBreakMode = .byTruncatingTail
+    label.lineBreakMode = .ByTruncatingTail
     return label
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

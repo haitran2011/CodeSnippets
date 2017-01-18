@@ -10,12 +10,12 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#Button#&gt;: UIButton = {
-    let button = UIButton(type: .system)
+    let button = UIButton(type: .System)
     button.setBorder(width: &lt;#T##CGFloat#&gt;, color: &lt;#T##UIColor#&gt;)
     button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
     button.title = &lt;#T##title: String!##String!#&gt;
     button.backgroundColor = &lt;#UIColor#&gt;
-    button.addBorderline(for: &lt;#T##UIRectEdge#&gt;)
+    button.addBorderLine(rectEdge: &lt;#T##UIRectEdge#&gt;)
     return button
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
