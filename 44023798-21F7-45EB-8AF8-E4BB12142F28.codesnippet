@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vcc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import ReactiveCocoa
+import SnapKit
+import TinyCoordinator
+import ExtensionKit
+
+internal final class &lt;#ViewController#&gt;: UIViewController {
+    private let viewModel: &lt;#ViewModel#&gt; = &lt;#ViewModel#&gt;()
+    private var dataSource: &lt;#DataSource#&gt;!
+    private var delegate: &lt;#Delegate#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override internal init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        commitInit()
+    }
+    
+    required internal init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commitInit()
+    }
+    
+    private func commitInit() {
+        dataSource = &lt;#DataSource#&gt;(collectionView: collectionView)
+        delegate = &lt;#Delegate#&gt;(collectionView: collectionView)
+    }
+    
+    private let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = Const.Colors.backgroundLight
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.alwaysBounceVertical = true
+        return collectionView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUserInterface()
+        setupEventsBinding()
+        viewModel.fetchData()
+    }
+    
+    private func setupUserInterface() {
+        view.addSubview(collectionView)
+        collectionView.snp_makeConstraints { (make) -&gt; Void in
+            make.edges.equalTo(view)
+        }
+    }
+    
+    private func setupEventsBinding() {
+        collectionView.dataSource = dataSource
+        collectionView.delegate = delegate
+        
+        viewModel.globalDataMetric.producer
+            .skipOnce()
+            .observeOnUIScheduler()
+            .startWithNext { [weak self] (globalDataMetric) in
+                guard let this = self else { return }
+                this.dataSource.globalDataMetric = globalDataMetric
+                this.collectionView.reloadData()
+                this.endPullToRefresh()
+        }
+        
+        viewModel.error.producer
+            .skipOnce()
+            .observeOnUIScheduler()
+            .startWithNext { [weak self] in
+                guard let this = self else { return }
+                this.presentError(($0))
+                this.endPullToRefresh()
+        }
+
+        viewModel.executing.producer
+            .skipOnce()
+            .observeOnUIScheduler()
+            .startWithNext { [weak self] (executing) in
+                if executing {
+                    self?.view.startExecute()
+                } else {
+                    self?.view.stopExecute()
+                }
+            }
+
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>44023798-21F7-45EB-8AF8-E4BB12142F28</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewController.init-CollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

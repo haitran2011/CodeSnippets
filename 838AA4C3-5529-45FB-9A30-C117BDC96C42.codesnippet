@@ -16,6 +16,8 @@
 	<string>838AA4C3-5529-45FB-9A30-C117BDC96C42</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>New ViewModel</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>ViewModel.init-lazy</string>
 	<key>IDECodeSnippetUserSnippet</key>

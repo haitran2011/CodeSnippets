@@ -10,6 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>import ReactiveCocoa
+import TinyCoordinator
 
 class &lt;#ViewModel#&gt; {
     lazy var globalDataMetric: MutableProperty&lt;TCGlobalDataMetric&gt; = {
@@ -37,7 +38,7 @@ class &lt;#ViewModel#&gt; {
     }
     
     deinit {
-        debugPrint("\(__FILE__):\(__LINE__):\(self.dynamicType):\(__FUNCTION__)")
+        loggingPrint("")
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

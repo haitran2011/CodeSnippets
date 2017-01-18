@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#Button#&gt;: UIButton = {
-    let button = UIButton(type: .System)
+    let button = UIButton(type: .system)
     button.setBorder(width: &lt;#T##CGFloat#&gt;, color: &lt;#T##UIColor#&gt;)
     button.titleColor = &lt;#T##color: UIColor!##UIColor!#&gt;
     button.title = &lt;#T##title: String!##String!#&gt;

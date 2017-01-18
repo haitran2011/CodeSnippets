@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>import ObjectMapper
 
-class &lt;#Class#&gt;: Mappable {
+class &lt;#Class#&gt;: Mappable, DefaultReflectable {
     var &lt;#key#&gt; = ""
     var &lt;#key#&gt; = ""
     var &lt;#key#&gt; = ""

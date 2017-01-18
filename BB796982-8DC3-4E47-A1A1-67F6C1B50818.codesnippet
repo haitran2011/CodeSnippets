@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dsc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import TinyCoordinator
+
+final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
+    deinit {
+        loggingPrint("")
+    }
+    
+    func registerReusableCell() {
+        collectionView?.tc_registerReusableCellClass(&lt;#CollectionViewCell#&gt;.self)
+    }
+    
+    func reusableCellIdentifierForIndexPath(indexPath: NSIndexPath) -&gt; String {
+        let data = globalDataMetric.dataForItemAtIndexPath(indexPath)
+        if data is &lt;#DataType#&gt; {
+            return &lt;#CollectionViewCell#&gt;.reuseIdentifier
+        } else if data is &lt;#DataType#&gt; {
+            return &lt;#CollectionViewCell#&gt;.reuseIdentifier
+        }
+        
+        fatalError("Resuable cell identifier no provide for \(indexPath)")
+    }
+    
+    func loadData(data: TCDataType, forReusableCell cell: TCCellType) {
+        if let reusableCell = cell as? UICollectionViewCell {
+            reusableCell.setupData(data)
+        }
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BB796982-8DC3-4E47-A1A1-67F6C1B50818</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DataSource.init-CollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
