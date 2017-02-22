@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>let &lt;#View#&gt;: UIView = {
     let view = UIView()
+    view.backgroundColor = Const.Colors.backgroundDefault
     return view
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -14,10 +14,10 @@
     textField.textColor = CHXBlackColor
     textField.font = CHXFontOfSize13
     textField.secureTextEntry = false
-    textField.clearButtonMode = .WhileEditing
-    textField.autocapitalizationType = .Words
-    textField.autocorrectionType = .Yes
-    textField.borderStyle = .None
+    textField.clearButtonMode = .whileEditing
+    textField.autocapitalizationType = .words
+    textField.autocorrectionType = .yes
+    textField.borderStyle = .none
     textField.placeholder = ""
     return textField
 }()

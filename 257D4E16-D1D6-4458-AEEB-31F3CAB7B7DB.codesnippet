@@ -2,26 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>scrollview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let &lt;#TextField#&gt;: UITextField = {
-    let field = UITextField()
-    field.contentInsets = UIEdgeInsetsMake(0, 8, 0, 8)
-    field.placeholder = ""
-    field.font = CHXFontOfSize13
-}()</string>
+	<string>let scrollView: UIScrollView = {
+    let view = UIScrollView()
+    view.alwaysBounceVertical = true
+    view.backgroundColor = Const.Colors.backgroundLight
+    return view
+}()
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1150B43D-810D-4148-BF60-4D0436623304</string>
+	<string>257D4E16-D1D6-4458-AEEB-31F3CAB7B7DB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>new scrollview property</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITextField</string>
+	<string>UIScrollView.init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
