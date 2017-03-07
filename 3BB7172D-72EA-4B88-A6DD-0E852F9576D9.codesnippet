@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+	<string>dispatch_semaphore_t semaphore = dispatch_semaphore_create(&lt;#capacity#&gt;);
 dispatch_semaphore_signal(semaphore);
 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);</string>
 	<key>IDECodeSnippetIdentifier</key>

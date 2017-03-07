@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+open class EquidistanceFlowLayout: UICollectionViewFlowLayout {
+    open fileprivate(set) var spacing: CGFloat = 8
+    
+    override public init() {
+        super.init()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    convenience public init(spacing: CGFloat) {
+        self.init()
+        self.spacing = spacing
+    }
+    
+    open override func layoutAttributesForElements(in rect: CGRect) -&gt; [UICollectionViewLayoutAttributes]? {
+        guard let layoutAttributes = super.layoutAttributesForElements(in: rect) else {
+            fatalError()
+        }
+        
+        let contentWidth = collectionViewContentSize.width - spacing * 2
+        let fixedSpacing: CGFloat = spacing
+        var lastSection = 0
+        for (index, _) in layoutAttributes.enumerated() {
+            if 0 == index {
+                continue
+            }
+            
+            let currentLayoutAttributes = layoutAttributes[index]
+            if currentLayoutAttributes.indexPath.section != lastSection {
+                lastSection = currentLayoutAttributes.indexPath.section
+                continue
+            }
+            
+            let prevLayoutAttributes = layoutAttributes[index - 1]
+            let origin = prevLayoutAttributes.frame.maxX
+            if origin + fixedSpacing + currentLayoutAttributes.frame.size.width &lt; contentWidth {
+                var frame = currentLayoutAttributes.frame
+                frame.origin.x = origin + fixedSpacing
+                currentLayoutAttributes.frame = frame
+            }
+            lastSection = currentLayoutAttributes.indexPath.section
+        }
+        
+        return layoutAttributes
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>901AE48B-66EA-45CE-B4A7-0E3B857D9369</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>FlowLayout: equal spacing</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

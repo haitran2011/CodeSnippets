@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+open class StretchyHeaderFlowLayout: UICollectionViewFlowLayout {
+    open fileprivate(set) var topDockHeight: CGFloat = 0
+    open fileprivate(set) var coefficient: CGFloat = 2.4
+    open var scrollUpAction: ((_ progress: CGFloat) -&gt; ())?
+    open var scrollDownAction: ((_ translation: CGFloat) -&gt; ())?
+    fileprivate var headerAttributes: UICollectionViewLayoutAttributes?
+    
+    override public init() {
+        super.init()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    convenience public init(
+        topDockHeight: CGFloat,
+        coefficient: CGFloat = 2.4,
+        scrollUpAction: ((_ progress: CGFloat) -&gt; ())? = nil,
+        scrollDownAction: ((_ translation: CGFloat) -&gt; ())? = nil)
+    {
+        self.init()
+        self.topDockHeight = topDockHeight
+        self.coefficient = coefficient
+        self.scrollUpAction = scrollUpAction
+        self.scrollDownAction = scrollDownAction
+    }
+    
+    override open func layoutAttributesForElements(in rect: CGRect) -&gt; [UICollectionViewLayoutAttributes]? {
+        var layoutAttributes = super.layoutAttributesForElements(in: rect)! as [UICollectionViewLayoutAttributes]
+        
+        let insets = collectionView!.contentInset
+        let offset = collectionView!.contentOffset
+        let minY = -insets.top
+        if (offset.y &lt; minY) {
+            let deltaY: CGFloat = fabs(offset.y - minY)
+            for attributes in layoutAttributes {
+                if 0 == attributes.indexPath.section {
+                    if attributes.representedElementKind == UICollectionElementKindSectionHeader {
+                        var frame: CGRect = attributes.frame
+                        let referenceHeight: CGFloat = stretchyHeaderReferenceSize().height
+                        var newHeight: CGFloat = max(minY, referenceHeight + deltaY)
+                        if newHeight &gt; referenceHeight * coefficient {
+                            newHeight = referenceHeight * coefficient
+                        }
+                        frame.size.height = newHeight
+                        frame.origin.y = frame.minY - deltaY
+                        attributes.frame = frame
+                        break
+                    }
+                }
+            }
+            scrollDownAction?(deltaY)
+        } else if topDockHeight &gt; 0 {
+            let referenceHeight = stretchyHeaderReferenceSize().height
+            let coverHeight = referenceHeight - topDockHeight - insets.top
+            if offset.y &gt; coverHeight {
+                let deltaY = fabs(offset.y)
+                for attributes in layoutAttributes {
+                    if 0 == attributes.indexPath.section {
+                        if attributes.representedElementKind == UICollectionElementKindSectionHeader {
+                            var frame = attributes.frame
+                            frame.origin.y = deltaY - coverHeight
+                            attributes.frame = frame
+                            attributes.zIndex = 1024
+                            headerAttributes = attributes
+                        } else {
+                            if let headerAttributes = headerAttributes {
+                                var frame = headerAttributes.frame
+                                frame.origin.y = deltaY - coverHeight
+                                headerAttributes.frame = frame
+                                layoutAttributes.append(headerAttributes)
+                            }
+                        }
+                    }
+                }
+                scrollUpAction?(1.0)
+            } else {
+                scrollUpAction?(1.0 - (coverHeight - offset.y) / coverHeight)
+            }
+        }
+
+        return layoutAttributes
+    }
+    
+    fileprivate func stretchyHeaderReferenceSize() -&gt; CGSize {
+        if let collectionView = collectionView {
+            if let delegate = collectionView.delegate as? UICollectionViewDelegateFlowLayout {
+                if let size = delegate.collectionView?(collectionView, layout: self, referenceSizeForHeaderInSection: 0) {
+                    return size
+                }
+            }
+        }
+        return headerReferenceSize
+    }
+    
+    
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -&gt; Bool {
+        return true
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9826A413-5A1B-4220-9D9C-7F2CEF6A01C9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>FlowLayout: stretch header</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

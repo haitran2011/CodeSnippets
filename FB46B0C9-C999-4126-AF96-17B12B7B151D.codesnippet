@@ -9,16 +9,16 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var textField: UITextField = {
+	<string>let textField: UITextField = {
     let textField = UITextField()
     textField.textColor = CHXBlackColor
     textField.font = CHXFontOfSize13
     textField.secureTextEntry = false
-    textField.clearButtonMode = .WhileEditing
-    textField.autocapitalizationType = .Words
-    textField.autocorrectionType = .Yes
-    textField.borderStyle = .None
-    textField.placeholder = ""
+    textField.clearButtonMode = .whileEditing
+    textField.autocapitalizationType = .words
+    textField.autocorrectionType = .yes
+    textField.borderStyle = .none
+    textField.placeholder = &lt;#placeholder#&gt;
     return textField
 }()
 </string>
@@ -27,7 +27,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UITextField.init-lazy</string>
+	<string>UITextField: property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

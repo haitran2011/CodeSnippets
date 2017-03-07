@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vcc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+import ExtensionKit
+
+internal final class &lt;#ViewController#&gt;: UIViewController {
+    private let viewModel: &lt;#ViewModel#&gt; = &lt;#ViewModel#&gt;()
+    private var dataSource: &lt;#DataSource#&gt;!
+    private var delegate: &lt;#Delegate#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override internal init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        commitInit()
+    }
+    
+    required internal init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commitInit()
+    }
+    
+    private func commitInit() {
+        dataSource = &lt;#DataSource#&gt;(collectionView: collectionView)
+        delegate = &lt;#Delegate#&gt;(collectionView: collectionView)
+    }
+    
+    private let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = Const.Colors.backgroundLight
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.alwaysBounceVertical = true
+        return collectionView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUserInterface()
+        setupEventsBinding()
+        viewModel.fetchData()
+    }
+    
+    private func setupUserInterface() {
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) -&gt; Void in
+            make.edges.equalTo(view)
+        }
+    }
+    
+    private func setupEventsBinding() {
+        collectionView.dataSource = dataSource
+        collectionView.delegate = delegate
+        
+        viewModel.globalDataMetric.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (globalDataMetric) in
+            guard let this = self else { return }
+            this.dataSource.globalDataMetric = globalDataMetric
+            this.collectionView.reloadData()
+            this.endPullToRefresh()
+        }
+        
+        viewModel.error.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] in
+            guard let this = self else { return }
+            this.presentError(($0))
+            this.endPullToRefresh()
+        }
+        
+        viewModel.executing.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (executing) in
+            if executing {
+                self?.view.startActivityIndicatorAnimation()
+            } else {
+                self?.view.stopActivityIndicatorAnimation()
+            }
+        }
+        
+        viewModel.noMoreData.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (noMoreData) in
+            guard let this = self else { return }
+            if noMoreData {
+                this.removeBottomPullToRefresh()
+            } else {
+                this.collectionView.chx_addBottomRefreshControlUsingBlock { [weak self] (scrollView) in
+                    guard let this = self else { return }
+                    this.viewModel.fetchData()
+                }
+            }
+        }
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A4216E30-BBEF-4965-9987-18A1A65B93D0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIViewController: based on collection view file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

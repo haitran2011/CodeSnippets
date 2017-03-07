@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>layer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let &lt;#layer#&gt;: CALayer = {
+    let layer = CALayer()
+    layer.backgroundColor = Const.Colors.backgroundPlaceholder.cgColor
+    layer.height = 1.pointToPixel
+    return layer
+}()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5C778774-27BD-4EEF-9E1D-130549DB7652</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>new CALyer</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CALayer: property</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

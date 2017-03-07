@@ -27,7 +27,7 @@ required init?(coder aDecoder: NSCoder) {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController-subclass-convenience-initializer</string>
+	<string>initializer UIViewController subclass convenience initializer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

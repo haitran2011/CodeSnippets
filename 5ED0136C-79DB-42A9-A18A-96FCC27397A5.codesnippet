@@ -21,7 +21,7 @@ UIImage *image = [UIImage imageWithColor:[UIColor redColor] Rect:button.bounds];
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIButton.init</string>
+	<string>UIButton: new instance</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

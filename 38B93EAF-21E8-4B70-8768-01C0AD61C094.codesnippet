@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cellc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+
+open class SwipeAction: NSObject {
+    open let title: String
+    open let color: UIColor
+    open let backgroundColor: UIColor
+    public init(title: String, color: UIColor = UIColor.white, backgroundColor: UIColor = UIColor.red) {
+        self.title = title
+        self.color = color
+        self.backgroundColor = backgroundColor
+    }
+    
+    open var layoutWidth: CGFloat {
+        let str = title as NSString
+        let options: NSStringDrawingOptions = [.usesLineFragmentOrigin, .usesFontLeading, .truncatesLastVisibleLine]
+        let width = str.boundingRect(
+            with: CGSize(width: UIScreen.main.bounds.size.width, height: CGFloat.greatestFiniteMagnitude),
+            options: options, attributes: [NSFontAttributeName: font],
+            context: nil
+            ).size.width
+        return ceil(width) + 16
+    }
+    
+    fileprivate var font: UIFont {
+        return UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+    }
+}
+
+public protocol SwipeActionDelegate {
+    var canEdit: Bool { get }
+    var swipeActions: [SwipeAction] { get }
+    func handleSwipeAction(_ index: Int)
+}
+
+extension SwipeableCollectionViewCell: SwipeActionDelegate {
+    public var canEdit: Bool {
+        return false
+    }
+    
+    public var swipeActions: [SwipeAction] {
+        return []
+    }
+    
+    public func handleSwipeAction(_ index: Int) {
+    }
+}
+
+/// Use with SwipeableCollectionView
+open class SwipeableCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
+    fileprivate var totalWidth: CGFloat {
+        return swipeActions.map { $0.layoutWidth }.reduce(0, +)
+    }
+    fileprivate let privateContentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    fileprivate var editing: Bool = false
+    fileprivate var didEditedHandler: (() -&gt; ())?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commitInit()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commitInit()
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        privateContentView.backgroundColor = contentView.backgroundColor
+    }
+    
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        contentView.transform = CGAffineTransform.identity
+        privateContentView.transform = CGAffineTransform.identity
+        editing = false
+        loggingPrint("")
+    }
+    
+    fileprivate func commitInit() {
+        isExclusiveTouch = true
+        contentView.isExclusiveTouch = true
+
+        var attribute: NSLayoutAttribute = .right
+        var rightView: UIView = self
+        for (index, element) in swipeActions.enumerated() {
+            let button = UIButton(type: .custom)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = element.backgroundColor
+            button.setTitle(element.title, for: .normal)
+            button.setTitleColor(element.color, for: .normal)
+            button.titleLabel?.font = element.font
+            button.tag = index
+            
+            button.addTarget(self, action: #selector(handleClickAction(_:)), for: .touchDown)
+            
+            addSubview(button)
+            sendSubview(toBack: button)
+            addConstraints([
+                NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: element.layoutWidth),
+                NSLayoutConstraint(item: button, attribute: .right, relatedBy: .equal, toItem: rightView, attribute: attribute, multiplier: 1, constant: 0)
+                ])
+            
+            rightView = button
+            attribute = .left
+        }
+        
+        addSubview(privateContentView)
+        addConstraints([
+            NSLayoutConstraint(item: privateContentView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: privateContentView, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: privateContentView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: privateContentView, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: 0)
+            ])
+        sendSubview(toBack: privateContentView)
+    }
+    
+    dynamic fileprivate func handleClickAction(_ sender: UIButton) {
+        handleSwipeAction(sender.tag)
+        editing = false
+        didEditedHandler?()
+    }
+    
+    fileprivate func shut(_ completion: (() -&gt; ())? = nil) {
+        executeAnimations({
+            self.contentView.transform = CGAffineTransform.identity
+            self.privateContentView.transform = CGAffineTransform.identity
+        }, completion: { (_) in
+            self.editing = false
+            completion?()
+        })
+    }
+    
+    fileprivate func lateralMove(contentViewMove: CGFloat, privateViewMove: CGFloat) {
+        loggingPrint("contentViewMove: \(contentViewMove), privateViewMove: \(privateViewMove)")
+        contentView.transform = CGAffineTransform(translationX: contentViewMove, y: 0)
+        privateContentView.transform = CGAffineTransform(translationX: privateViewMove, y: 0)
+    }
+}
+
+private func executeAnimations(_ animations: @escaping () -&gt; (), completion: ((Bool) -&gt; ())? = nil) {
+    UIView.animate(withDuration: 0.25, delay: 0, options: .curveLinear, animations: animations, completion: completion)
+}
+
+/// Use with SwipeableCollectionViewCell
+open class SwipeableCollectionView: UICollectionView, UIGestureRecognizerDelegate {
+    fileprivate var swipeGestureRecognizer: UIPanGestureRecognizer!
+    fileprivate var tapGestureRecognizer: UITapGestureRecognizer!
+    fileprivate var editing: Bool = false
+    
+    public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        commitInit()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commitInit()
+    }
+    
+    fileprivate func commitInit() {
+        swipeGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanAction(_:)))
+        swipeGestureRecognizer.maximumNumberOfTouches = 1
+        swipeGestureRecognizer.delegate = self
+        
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapAction(_:)))
+//        tapGestureRecognizer.cancelsTouchesInView = false
+        tapGestureRecognizer.delegate = self
+        tapGestureRecognizer.require(toFail: swipeGestureRecognizer)
+        
+        if let recognizers = gestureRecognizers {
+            for recognizer in recognizers {
+                if recognizer is UIPanGestureRecognizer {
+                    recognizer.require(toFail: swipeGestureRecognizer)
+                }
+                if recognizer is UITapGestureRecognizer {
+                    recognizer.require(toFail: tapGestureRecognizer)
+                }
+            }
+        }
+        
+        addGestureRecognizer(swipeGestureRecognizer)
+        addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    dynamic fileprivate func handlePanAction(_ sender: UIPanGestureRecognizer) {
+        guard let indexPath = indexPathForItem(at: sender.location(in: self)) else {
+            return
+        }
+        guard let cell = cellForItem(at: indexPath) as? SwipeableCollectionViewCell else {
+            return
+        }
+        
+        cell.didEditedHandler = { [weak self] in
+            self?.editing = false
+        }
+        loggingPrint("section: \(indexPath.section), item: \(indexPath.item)")
+        
+        var translationX = sender.translation(in: self).x
+        translationX = translationX &gt; 15 ? 15 : translationX
+        loggingPrint("translationX: \(translationX)")
+        
+        let totalWidth = cell.totalWidth
+        let fabsTranslationX = fabs(translationX)
+        var privateViewMove: CGFloat = translationX
+        var contentViewMove: CGFloat = translationX
+        
+        if fabsTranslationX &gt; totalWidth {
+            if translationX &gt; 0 {
+                privateViewMove = totalWidth
+            } else {
+                privateViewMove = -totalWidth
+            }
+        }
+        if fabsTranslationX &gt; 30 +  totalWidth {
+            if translationX &gt; 0 {
+                contentViewMove = totalWidth + 30
+            } else {
+                contentViewMove = -(totalWidth + 30)
+            }
+        }
+        
+        switch sender.state {
+        case .began:
+            if cell.editing {
+                shut(withSender: sender, forCell: cell)
+            } else if editing {
+                restoration()
+            } else {
+                editing = true
+                cell.editing = true
+            }
+        case .changed:
+            cell.lateralMove(contentViewMove: contentViewMove, privateViewMove: privateViewMove)
+            loggingPrint("CHANGED")
+        case .ended:
+            if translationX &gt; 0 {
+                executeAnimations({
+                    cell.lateralMove(contentViewMove: -30, privateViewMove: -30)
+                }, completion: { (_) in
+                    self.shut(withSender: sender, forCell: cell)
+                })
+            } else {
+                // 如果滑动过半，到位，否则 recover
+                if 2 * fabsTranslationX &gt; totalWidth {
+                    executeAnimations({
+                        cell.lateralMove(contentViewMove: -totalWidth, privateViewMove: -totalWidth)
+                    })
+                } else {
+                    shut(withSender: sender, forCell: cell)
+                }
+            }
+            loggingPrint("ENDED")
+        case .cancelled:
+            shut(withSender: sender, forCell: cell)
+            loggingPrint("CANCELED")
+        default:
+            loggingPrint("DEFAULT")
+        }
+    }
+    
+    fileprivate func shut(withSender sender: UIPanGestureRecognizer, forCell cell: SwipeableCollectionViewCell) {
+        sender.isEnabled = false
+        cell.shut { [weak self] in
+            sender.isEnabled = true
+            self?.editing = false
+        }
+    }
+    
+    dynamic fileprivate func handleTapAction(_ sender: UIGestureRecognizer) {
+        restoration()
+    }
+    
+    fileprivate func restoration() {
+        for cell in visibleCells where cell is SwipeableCollectionViewCell  {
+            shut(withSender: self.swipeGestureRecognizer, forCell: (cell as! SwipeableCollectionViewCell))
+        }
+        editing = false
+        loggingPrint("")
+    }
+    
+    open override func reloadData() {
+        super.reloadData()
+        editing = false
+    }
+    
+    open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -&gt; Bool {
+        if gestureRecognizer == swipeGestureRecognizer {
+            let translation = swipeGestureRecognizer.translation(in: superview)
+            return (fabs(translation.x) &gt; fabs(translation.y))
+        }
+        if gestureRecognizer == tapGestureRecognizer {
+            return editing
+        }
+        return super.gestureRecognizerShouldBegin(gestureRecognizer)
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>38B93EAF-21E8-4B70-8768-01C0AD61C094</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Cell: based on collection view with swipe action file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

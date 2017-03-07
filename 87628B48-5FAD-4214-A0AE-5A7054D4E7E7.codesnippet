@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>hf</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+
+final class &lt;#TableViewHeaderFooterView#&gt;: UITableViewHeaderFooterView, TCReusableViewSupport {
+    static let fixedHeight: CGFloat = &lt;#value#&gt;
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    private func setupUserInterface() {
+        
+    }
+    
+    private func setupEventsBinding() {
+        
+    }
+    
+    func populate(data: TCDataType) {
+        guard let data = data as? CircleStatusLayout else { return }
+        self.data = data
+    }
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>87628B48-5FAD-4214-A0AE-5A7054D4E7E7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableViewHeaderFooterView: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

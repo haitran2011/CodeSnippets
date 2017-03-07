@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import ExtensionKit
+
+final class &lt;#UIView#&gt;: UIView {
+    deinit {
+        loggingPrint("")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    private func setupUserInterface() {
+        
+    }
+    
+    private func setupEventsBinding() {
+        
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9DED7698-D37B-45E2-B426-B3C8C964A60B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

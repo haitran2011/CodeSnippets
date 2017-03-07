@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import ReactiveCocoa
+import ReactiveSwift
+import TinyCoordinator
+
+final internal class &lt;#ViewModel#&gt; {
+    private var fetchDataAction: Action&lt;Void, TCGlobalDataMetric, NSError&gt;!
+    private(set) internal var globalDataMetric: MutableProperty&lt;TCGlobalDataMetric&gt;!
+    
+    private(set) internal var error: MutableProperty&lt;NSError&gt;!
+    private(set) internal var executing: Property&lt;Bool&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    internal init() {
+        fetchDataAction = makeFetchDataAction()
+        globalDataMetric = fetchDataAction.rac_values(TCGlobalDataMetric.empty())
+        error = fetchDataAction.rac_errors(NSError.empty)
+        executing = fetchDataAction.isExecuting
+    }
+    
+    private func makeFetchDataAction() -&gt; Action&lt;Void, TCGlobalDataMetric, NSError&gt;! {
+        return Action { [weak self] in
+            guard let this = self else { return SignalProducer.empty }
+            // FIXME:
+            return UpdateAPI().asyncProducer.map { (result) -&gt; TCGlobalDataMetric in
+                return makePlaceholderGlobalDataMetric(result: result)
+            }
+        }
+    }
+    
+    internal func fetchData() {
+        fetchDataAction.apply().start()
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E91006C6-B968-4D69-86C9-A61B22D37E2B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewModel: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -23,10 +23,10 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>new scrollview property</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIScrollView.init</string>
+	<string>UIScrollView: property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

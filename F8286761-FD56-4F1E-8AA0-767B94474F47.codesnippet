@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+
+open class StickyHeadersFlowLayout: UICollectionViewFlowLayout {
+    override open func layoutAttributesForElements(in rect: CGRect) -&gt; [UICollectionViewLayoutAttributes]? {
+        
+        // MARK: - Inner funcs
+        func onlyHeader(_ attributes: UICollectionViewLayoutAttributes) -&gt; Bool {
+            guard attributes.representedElementKind == UICollectionElementKindSectionHeader else {
+                return false
+            }
+            return true
+        }
+        
+        func onlyCell(_ attributes: UICollectionViewLayoutAttributes) -&gt; Bool {
+            guard attributes.representedElementCategory == .cell else {
+                return false
+            }
+            return true
+        }
+        
+        // MARK: - Body Begin
+        
+        var layoutAttributes = super.layoutAttributesForElements(in: rect)! as [UICollectionViewLayoutAttributes]
+        let headersNeedingLayout = NSMutableIndexSet()
+        
+        layoutAttributes.filter(onlyCell).forEach { (attributes: UICollectionViewLayoutAttributes) in
+            headersNeedingLayout.add(attributes.indexPath.section)
+        }
+        
+        layoutAttributes.filter(onlyHeader).forEach { (attributes: UICollectionViewLayoutAttributes) in
+            headersNeedingLayout.remove(attributes.indexPath.section)
+        }
+        
+        headersNeedingLayout.enumerate({ (index, stop) -&gt; Void in
+            let indexPath = IndexPath(item: 0, section: index)
+            if let attributes = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: indexPath) {
+                layoutAttributes.append(attributes)
+            }
+        })
+        
+        layoutAttributes.filter(onlyHeader).forEach { (attributes: UICollectionViewLayoutAttributes) in
+            let section = attributes.indexPath.section
+            if collectionView!.numberOfItems(inSection: section) &lt;= 0 {
+                return
+            }
+            let attributesForFirstItemInSection = layoutAttributesForItem(at: IndexPath(item: 0, section: section))
+            let attributesForLastItemInSection = layoutAttributesForItem(at: IndexPath(item: collectionView!.numberOfItems(inSection: section) - 1, section: section))
+            var frame = attributes.frame
+            let offset = collectionView!.contentOffset.y + collectionView!.contentInset.top
+            
+            /* The header should never go further up than one-header-height above
+             the upper bounds of the first cell in the current section */
+            let minY = attributesForFirstItemInSection!.frame.minY - frame.height
+            /* The header should never go further down than one-header-height above
+             the lower bounds of the last cell in the section */
+            let maxY = attributesForLastItemInSection!.frame.maxY - frame.height
+            /* If it doesn't break either of those two rules then it should be
+             positioned using the y value of the content offset */
+            let y = min(max(offset, minY), maxY)
+            
+            frame.origin.y = y
+            attributes.frame = frame
+            attributes.zIndex = 99
+        }
+        
+        return layoutAttributes
+    }
+    
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -&gt; Bool {
+        return true
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F8286761-FD56-4F1E-8AA0-767B94474F47</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>FlowLayout: sticky headers</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

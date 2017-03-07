@@ -21,7 +21,7 @@ imagePickerVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIImagePickerController.init-Library</string>
+	<string>UIImagePickerController: new instance with photo library</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

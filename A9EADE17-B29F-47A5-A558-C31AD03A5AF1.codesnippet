@@ -19,7 +19,7 @@ NSDictionary *attributes = @{NSFontAttributeName:&lt;#font#&gt;], NSParagraphSty
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Text-line-spacing</string>
+	<string>NSAttributedString: set line spacing</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

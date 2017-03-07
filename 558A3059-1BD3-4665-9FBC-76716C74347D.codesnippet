@@ -15,24 +15,16 @@ import SnapKit
 class &lt;#UIView#&gt;: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupUserInterface()
         setupEventsBinding()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         setupUserInterface()
         setupEventsBinding()
     }
     
-    deinit {
-        debugPrint("\(#file):\(#line):\(#function)")
-    }
-}
-
-extension &lt;#UIView#&gt; {
     private func setupUserInterface() {
         
     }
@@ -40,14 +32,16 @@ extension &lt;#UIView#&gt; {
     private func setupEventsBinding() {
         
     }
+
 }
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>558A3059-1BD3-4665-9FBC-76716C74347D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIView</string>
+	<string>UIView: file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

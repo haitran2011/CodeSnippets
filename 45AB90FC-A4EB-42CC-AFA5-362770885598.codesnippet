@@ -9,25 +9,25 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+	<string>override func viewDidLoad() {
+    super.viewDidLoad()
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+}
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-    }</string>
+override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+}
+
+override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+}
+
+override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>45AB90FC-A4EB-42CC-AFA5-362770885598</string>
 	<key>IDECodeSnippetLanguage</key>

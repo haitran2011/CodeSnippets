@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vct</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+import ExtensionKit
+
+final class &lt;#ViewController#&gt;: UIViewController {
+    private let viewModel: &lt;#ViewModel#&gt; = &lt;#ViewModel#&gt;()
+    private var dataSource: &lt;#DataSource#&gt;!
+    private var delegate: &lt;#Delegate#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override internal init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        commitInit()
+    }
+    
+    required internal init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commitInit()
+    }
+    
+    private func commitInit() {
+        dataSource = &lt;#DataSource#&gt;(tableView: tableView)
+        delegate = &lt;#Delegate#&gt;(tableView: tableView)
+    }
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: CGRectZero, style: .plain)
+        tableView.backgroundColor = Const.Colors.backgroundLight
+        tableView.alwaysBounceVertical = true
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
+        tableView.tableHeaderView = UIView(frame: CGRectMake(0, 0, 0, 15))
+        tableView.tableFooterView = UIView(frame: CGRectMake(0, 0, 0, 15))
+        return tableView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUserInterface()
+        setupEventsBinding()
+        viewModel.fetchData()
+    }
+    
+    private func setupUserInterface() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) -&gt; Void in
+            make.edges.equalTo(view)
+        }
+    }
+    
+    private func setupEventsBinding() {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+        
+        viewModel.globalDataMetric.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (globalDataMetric) in
+            guard let this = self else { return }
+            this.dataSource.globalDataMetric = globalDataMetric
+            this.tableView.reloadData()
+            this.endPullToRefresh()
+        }
+        
+        viewModel.error.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] in
+            guard let this = self else { return }
+            this.presentError(($0))
+            this.endPullToRefresh()
+        }
+        
+        viewModel.executing.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (executing) in
+            if executing {
+                self?.view.startActivityIndicatorAnimation()
+            } else {
+                self?.view.stopActivityIndicatorAnimation()
+            }
+        }
+        
+        viewModel.noMoreData.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (noMoreData) in
+            guard let this = self else { return }
+            if noMoreData {
+                this.removeBottomPullToRefresh()
+            } else {
+                this.tableView.chx_addBottomRefreshControlUsingBlock { [weak self] (scrollView) in
+                    guard let this = self else { return }
+                    this.viewModel.fetchData()
+                }
+            }
+        }
+    }
+}
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A231311A-0E7C-4F5D-A161-1F6366423944</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIViewController: based on table view file comletion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

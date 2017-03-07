@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cellt</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+import ExtensionKit
+
+final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCReusableViewSupport {
+    static let fixedHeight: CGFloat = &lt;#height#&gt;
+    private weak var data: &lt;#Type#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    private func setupUserInterface() {
+        layoutMargins = UIEdgeInsets.zero
+        separatorInset = UIEdgeInsets.zero
+    }
+    
+    private func setupEventsBinding() {
+        
+    }
+    
+    func populate(data: TCDataType) {
+        guard let data = data as? &lt;#Type#&gt; else { return }
+        self.data = data
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D0AB44ED-6421-4C4D-A900-992B54899563</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Cell: based on table view file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

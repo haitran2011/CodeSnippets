@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mdl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>final class &lt;#Class#&gt;: NSObject, Mappable, DefaultReflectable {
+    var &lt;#key#&gt; = -1
+    var &lt;#key#&gt; = ""
+    var &lt;#key#&gt; = ""
+    var &lt;#key#&gt; = ""
+    var &lt;#key#&gt; = ""
+    var &lt;#key#&gt; = ""
+    
+    override init() {}
+    required init?(map: Map) {}
+    func mapping(map: Map) {
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+        &lt;#key#&gt; &lt;- map["&lt;#value#&gt;"]
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3667FB7E-22CB-4780-B968-D4CF021EACBB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Model: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

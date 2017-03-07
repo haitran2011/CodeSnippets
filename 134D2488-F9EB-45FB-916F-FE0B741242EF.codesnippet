@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cellc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Foundation
+import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+import ExtensionKit
+
+final class &lt;#UICollectionViewCell#&gt;: UICollectionViewCell, TCReusableViewSupport {
+    static let fixedHeight: CGFloat = &lt;#height#&gt;
+    private weak var data: &lt;#Type#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    private func setupUserInterface() {
+        layoutMargins = UIEdgeInsets.zero
+        backgroundColor = Const.Colors.backgroundDefault
+        backgroundView = {
+            let view = UIView()
+            view.backgroundColor = Const.Colors.backgroundDefault
+            return view
+        }()
+        selectedBackgroundView = {
+            let view = UIView()
+            view.backgroundColor = Const.Colors.backgroundSelected
+            return view
+        }()
+    }
+    
+    private func setupEventsBinding() {
+        
+    }
+    
+    func populate(data: TCDataType) {
+        guard let data = data as? &lt;#Type#&gt; else { return }
+        self.data = data
+    }
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>134D2488-F9EB-45FB-916F-FE0B741242EF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Cell: based on collection view file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

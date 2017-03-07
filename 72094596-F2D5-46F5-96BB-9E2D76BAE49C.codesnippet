@@ -22,7 +22,7 @@ required init?(coder aDecoder: NSCoder) {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController-subclass-designated-initializer</string>
+	<string>initializer: UIViewController subclass designated initializer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

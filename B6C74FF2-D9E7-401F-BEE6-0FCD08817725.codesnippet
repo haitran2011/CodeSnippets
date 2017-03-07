@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>open class BorderedItemFlowLayoutAttributes: UICollectionViewLayoutAttributes {
+    open fileprivate(set) var nearByTop: Bool = false
+    open fileprivate(set) var nearByLeft: Bool = false
+
+    open override func copy(with zone: NSZone?) -&gt; Any {
+        let copy = super.copy(with: zone)
+        if let copy = copy as? BorderedItemFlowLayoutAttributes {
+            copy.nearByTop = nearByTop
+            copy.nearByLeft = nearByLeft
+        }
+        
+        return copy
+    }
+    
+    open override func isEqual(_ object: Any?) -&gt; Bool {
+        guard let other = object as? BorderedItemFlowLayoutAttributes else {
+            return false
+        }
+        
+        if other.nearByLeft == nearByLeft &amp;&amp; other.nearByTop == nearByTop {
+            return super.isEqual(other)
+        }
+        
+        return false
+    }
+}
+
+open class BorderedItemFlowLayout: UICollectionViewFlowLayout {
+    open override class var layoutAttributesClass : AnyClass {
+        return BorderedItemFlowLayoutAttributes.self
+    }
+    
+    open override func layoutAttributesForElements(in rect: CGRect) -&gt; [UICollectionViewLayoutAttributes]? {
+        guard let layoutAttributes = super.layoutAttributesForElements(in: rect) as? [BorderedItemFlowLayoutAttributes] else {
+            fatalError()
+        }
+        for attributes in layoutAttributes {
+            commitSetupFor(attributes)
+        }
+        return layoutAttributes
+    }
+    
+    open override func layoutAttributesForItem(at indexPath: IndexPath) -&gt; UICollectionViewLayoutAttributes? {
+        guard let layoutAttributes = super.layoutAttributesForItem(at: indexPath) as? BorderedItemFlowLayoutAttributes else {
+            fatalError()
+        }
+        commitSetupFor(layoutAttributes)
+        return layoutAttributes
+    }
+    
+    fileprivate func commitSetupFor(_ layoutAttributes :BorderedItemFlowLayoutAttributes) {
+        guard let firstLayoutAttributes = super.layoutAttributesForItem(at: IndexPath(item: 0, section: layoutAttributes.indexPath.section)) as? BorderedItemFlowLayoutAttributes else {
+            return
+        }
+        
+        layoutAttributes.nearByTop = firstLayoutAttributes.frame.midY == layoutAttributes.frame.midY
+        layoutAttributes.nearByLeft = firstLayoutAttributes.frame.midX == layoutAttributes.frame.midX
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B6C74FF2-D9E7-401F-BEE6-0FCD08817725</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>FlowLayout: with border line</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

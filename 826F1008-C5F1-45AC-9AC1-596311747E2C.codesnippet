@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>reuse</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
+import TinyCoordinator
+
+final class &lt;#UICollectionReusableView#&gt;: UICollectionReusableView, TCReusableViewSupport {
+    static let fixedHeight: CGFloat = &lt;#height#&gt;
+    private weak var data: &lt;#Type#&gt;!
+    
+    deinit {
+        loggingPrint("")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUserInterface()
+        setupEventsBinding()
+    }
+    
+    private func setupUserInterface() {
+        layoutMargins = UIEdgeInsets.zero
+    }
+    
+    private func setupEventsBinding() {
+        
+    }
+    
+    func populate(data: TCDataType) {
+        guard let data = data as? &lt;#Type#&gt; else { return }
+        self.data = data
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>826F1008-C5F1-45AC-9AC1-596311747E2C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionReuseableView: based on collection view file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

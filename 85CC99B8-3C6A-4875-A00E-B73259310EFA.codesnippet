@@ -9,12 +9,11 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var webView: UIWebView = {
+	<string>let webView: UIWebView = {
     let webView = UIWebView()
     webView.scrollView.backgroundColor = CHXGroupedTableViewBackgroundColor
     webView.scrollView.scrollsToTop = false
     webView.scalesPageToFit = true
-    webView.delegate = self
     return webView
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -22,7 +21,7 @@
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIWebView.init-lazy</string>
+	<string>UIWebView: property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
