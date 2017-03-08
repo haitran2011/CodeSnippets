@@ -12,35 +12,36 @@
 	<string>import UIKit
 import TinyCoordinator
 
-final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
-    deinit {
+final class &lt;#Delegate#&gt;: TCDelegate {
+        deinit {
         loggingPrint("")
     }
     
-    func registerReusableCell() {
-        collectionView.tc_registerReusableCell(class: &lt;#CollectionViewCell#&gt;.self)
-    }
-    
-    func reusableCellIdentifier(for indexPath: IndexPath) -&gt; String {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -&gt; CGSize {
         if let data = globalDataMetric.dataForItem(at: indexPath) {
-            if data is &lt;#DataType#&gt; {
-                return &lt;#CollectionViewCell#&gt;.reuseIdentifier
-            } else if data is &lt;#DataType#&gt; {
-                return &lt;#CollectionViewCell#&gt;.reuseIdentifier
-            }
+            return CGSize(width: UIScreen.width, height: 0)
         }
         
-        fatalError("Resuable cell identifier no provide for \(indexPath)")
+        return CGSize.zero
     }
     
-    func populateData(with data: TCDataType, forReusableCell cell: TCCellType) {
-        if let reusableCell = cell as? TCReusableViewSupport {
-            reusableCell.populate(data: data)
-            
-            // MARK: for iOS 10
-            (cell as! UIView).setNeedsLayout()
-            (cell as! UIView).layoutIfNeeded()
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -&gt; UIEdgeInsets {
+        if let data = globalDataMetric.dataForSupplementaryHeader(at: IndexPath(item: 0, section: section)) {
+            return UIEdgeInsets.zero
         }
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -&gt; CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 </string>
@@ -53,6 +54,6 @@ final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
