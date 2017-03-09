@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>fileprivate let nameLabel: YYLabel = {
     let label = YYLabel()
+    label.fadeOnAsynchronouslyDisplay = false
     label.displaysAsynchronously = true
     return label
 }()
