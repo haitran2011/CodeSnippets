@@ -12,7 +12,7 @@
 	<string>    // MARK: - UICollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -&gt; Int {
-        return 0
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
