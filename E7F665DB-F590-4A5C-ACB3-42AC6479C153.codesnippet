@@ -10,18 +10,22 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>convenience init(&lt;#ConvenienceInitializer#&gt;) {
-    
     self.init(nibName: nil, bundle: nil)
+    commitInit()
 }
 
-override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    commitInit()
 }
 
 required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+    commitInit()
 }
-</string>
+
+private func commitInit() {
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E7F665DB-F590-4A5C-ACB3-42AC6479C153</string>
 	<key>IDECodeSnippetLanguage</key>
