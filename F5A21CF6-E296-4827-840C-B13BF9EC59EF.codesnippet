@@ -32,7 +32,7 @@ final class &lt;#Delegate#&gt;: TCDelegate {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>delegate:  based on table view file completion</string>
+	<string>Delegate:  based on UITableView file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

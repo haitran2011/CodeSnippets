@@ -57,7 +57,7 @@ final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCReusableViewSupport {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Cell: based on table view file completion</string>
+	<string>Cell: based on UITableView file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

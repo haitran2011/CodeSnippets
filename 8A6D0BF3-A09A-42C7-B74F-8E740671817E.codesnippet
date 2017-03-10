@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dst</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // MARK: - UITableViewDataSource
+    
+    func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let reusableIdentifier = ""
+        guard let reusableCell = tableView.dequeueReusableCell(withIdentifier: reusableIdentifier) else {
+            fatalError("Dequeue reusable cell failed. Must register identifier `\(reusableIdentifier)` first.")
+        }
+        reusableCell.populate(data: &lt;#data#&gt;)
+        return reusableCell
+    }
+    
+    // MARK: Section Title
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -&gt; String? {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -&gt; String? {
+        return nil
+    }
+    
+    // MARK: Index
+    
+    func sectionIndexTitles(for tableView: UITableView) -&gt; [String]? {
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -&gt; Int {
+        return 0
+    }
+    
+    // MARK: Editing
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -&gt; Bool {
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    
+    // MARK: Move
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -&gt; Bool {
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8A6D0BF3-A09A-42C7-B74F-8E740671817E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DataSource implementation: based on UITableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

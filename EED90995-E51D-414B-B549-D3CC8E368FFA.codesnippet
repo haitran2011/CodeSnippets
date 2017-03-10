@@ -50,7 +50,7 @@ final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DataSource:  based on collection view file completion</string>
+	<string>DataSource:  based on UICollectionView file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

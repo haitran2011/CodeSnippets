@@ -319,7 +319,7 @@ open class SwipeableCollectionView: UICollectionView, UIGestureRecognizerDelegat
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Cell: based on collection view with swipe action file completion</string>
+	<string>Cell: based on UICollectionView with swipe action file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

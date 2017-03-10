@@ -54,7 +54,7 @@ final class &lt;#UICollectionReusableView#&gt;: UICollectionReusableView, TCReus
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UICollectionReuseableView: based on collection view file completion</string>
+	<string>UICollectionReuseableView: based on UICollectionView file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

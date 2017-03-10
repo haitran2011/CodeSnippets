@@ -112,7 +112,7 @@ final class &lt;#ViewController#&gt;: UIViewController {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController: based on table view file comletion</string>
+	<string>UIViewController: based on UITableView file comletion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
