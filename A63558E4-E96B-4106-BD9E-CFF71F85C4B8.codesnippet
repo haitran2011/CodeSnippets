@@ -11,15 +11,15 @@
 	<key>IDECodeSnippetContents</key>
 	<string>override init(frame: CGRect) {
     super.init(frame: frame)
-    setup()
+    commitInit()
 }
 
 required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    setup()
+    commitInit()
 }
 
-private func setup() {
+private func commitInit() {
 
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
