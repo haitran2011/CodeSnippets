@@ -12,7 +12,9 @@
 	<string>fileprivate let nameLabel: YYLabel = {
     let label = YYLabel()
     label.fadeOnAsynchronouslyDisplay = false
+    label.fadeOnHighlight = false
     label.displaysAsynchronously = true
+    label.clearContentsBeforeAsynchronouslyDisplay = false
     return label
 }()
 </string>
