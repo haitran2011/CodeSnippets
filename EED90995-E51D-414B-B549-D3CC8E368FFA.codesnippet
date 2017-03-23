@@ -9,13 +9,13 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import UIKit
+	<string>import UIKit
 import TinyCoordinator
+import ExtensionKit
 
-final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
+final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable, TCImageLazyLoadable {
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     func registerReusableCell() {
@@ -43,8 +43,15 @@ final class &lt;#DataSource#&gt;: TCDataSource, TCDataSourceable {
             (cell as! UIView).layoutIfNeeded()
         }
     }
-}
-</string>
+    
+    // MARK: - TCImageLazyLoadable
+    
+    func lazyPopulateData(with data: TCDataType, forReusableCell cell: TCCellType) {
+        if let reusableCell = cell as? TCLazyReusableViewSupport {
+            reusableCell.lazyPopulate(data: data)
+        }
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>EED90995-E51D-414B-B549-D3CC8E368FFA</string>
 	<key>IDECodeSnippetLanguage</key>

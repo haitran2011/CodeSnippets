@@ -17,7 +17,7 @@ import ExtensionKit
 
 final class &lt;#VC#&gt;: UIViewController {
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     override func viewDidLoad() {

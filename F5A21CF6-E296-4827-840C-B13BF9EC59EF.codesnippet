@@ -9,13 +9,13 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import UIKit
+	<string>import UIKit
 import TinyCoordinator
+import ExtensionKit
 
 final class &lt;#Delegate#&gt;: TCDelegate {
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
@@ -25,8 +25,7 @@ final class &lt;#Delegate#&gt;: TCDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F5A21CF6-E296-4827-840C-B13BF9EC59EF</string>
 	<key>IDECodeSnippetLanguage</key>

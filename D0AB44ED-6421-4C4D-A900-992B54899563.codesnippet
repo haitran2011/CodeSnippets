@@ -9,20 +9,19 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import UIKit
+	<string>import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 import SnapKit
 import TinyCoordinator
 import ExtensionKit
 
-final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCReusableViewSupport {
+final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCLazyReusableViewSupport {
     static let fixedHeight: CGFloat = &lt;#height#&gt;
     private weak var data: &lt;#Type#&gt;!
-    
+
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -45,10 +44,14 @@ final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCReusableViewSupport {
     private func setupEventsBinding() {
         
     }
-    
+
     func populate(data: TCDataType) {
         guard let data = data as? &lt;#Type#&gt; else { return }
         self.data = data
+    }
+    
+    func lazyPopulate(data: TCDataType) {
+            
     }
 }
 </string>

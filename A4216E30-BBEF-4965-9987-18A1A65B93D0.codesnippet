@@ -9,8 +9,7 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import UIKit
+	<string>import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 import SnapKit
@@ -23,7 +22,7 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
     private var delegate: &lt;#Delegate#&gt;!
     
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     override internal init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -40,7 +39,7 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
         dataSource = &lt;#DataSource#&gt;(collectionView: collectionView)
         delegate = &lt;#Delegate#&gt;(collectionView: collectionView)
     }
-    
+
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = Const.Colors.backgroundLight
@@ -73,13 +72,13 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
             this.collectionView.reloadData()
             this.endPullToRefresh()
         }
-        
+            
         viewModel.error.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] in
             guard let this = self else { return }
             this.presentError(($0))
             this.endPullToRefresh()
         }
-        
+                    
         viewModel.executing.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (executing) in
             if executing {
                 self?.view.startActivityIndicatorAnimation()
@@ -87,7 +86,7 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
                 self?.view.stopActivityIndicatorAnimation()
             }
         }
-        
+
         viewModel.noMoreData.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (noMoreData) in
             guard let this = self else { return }
             if noMoreData {
@@ -100,8 +99,7 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
             }
         }
     }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A4216E30-BBEF-4965-9987-18A1A65B93D0</string>
 	<key>IDECodeSnippetLanguage</key>

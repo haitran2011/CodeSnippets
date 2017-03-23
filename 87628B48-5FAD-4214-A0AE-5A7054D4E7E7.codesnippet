@@ -14,16 +14,18 @@ import ReactiveCocoa
 import ReactiveSwift
 import SnapKit
 import TinyCoordinator
+import ExtensionKit
 
-final class &lt;#TableViewHeaderFooterView#&gt;: UITableViewHeaderFooterView, TCReusableViewSupport {
-    static let fixedHeight: CGFloat = &lt;#value#&gt;
-    
+final class &lt;#UICollectionReusableView#&gt;: UICollectionReusableView, TCReusableViewSupport {
+    static let fixedHeight: CGFloat = &lt;#height#&gt;
+    private weak var data: &lt;#Type#&gt;!
+
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupUserInterface()
         setupEventsBinding()
     }
@@ -35,7 +37,7 @@ final class &lt;#TableViewHeaderFooterView#&gt;: UITableViewHeaderFooterView, TC
     }
     
     private func setupUserInterface() {
-        
+        layoutMargins = UIEdgeInsets.zero
     }
     
     private func setupEventsBinding() {
@@ -43,11 +45,11 @@ final class &lt;#TableViewHeaderFooterView#&gt;: UITableViewHeaderFooterView, TC
     }
     
     func populate(data: TCDataType) {
-        guard let data = data as? CircleStatusLayout else { return }
+        guard let data = data as? &lt;#Type#&gt; else { return }
         self.data = data
     }
-
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>87628B48-5FAD-4214-A0AE-5A7054D4E7E7</string>
 	<key>IDECodeSnippetLanguage</key>

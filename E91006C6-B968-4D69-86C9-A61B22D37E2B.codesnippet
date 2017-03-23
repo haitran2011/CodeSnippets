@@ -13,6 +13,7 @@
 import ReactiveCocoa
 import ReactiveSwift
 import TinyCoordinator
+import ExtensionKit
 
 final internal class &lt;#ViewModel#&gt; {
     private var fetchDataAction: Action&lt;Void, TCGlobalDataMetric, NSError&gt;!
@@ -22,7 +23,7 @@ final internal class &lt;#ViewModel#&gt; {
     private(set) internal var executing: Property&lt;Bool&gt;!
     
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     internal init() {

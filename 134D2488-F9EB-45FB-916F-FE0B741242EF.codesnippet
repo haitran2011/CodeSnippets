@@ -17,12 +17,12 @@ import SnapKit
 import TinyCoordinator
 import ExtensionKit
 
-final class &lt;#UICollectionViewCell#&gt;: UICollectionViewCell, TCReusableViewSupport {
+final class &lt;#UICollectionViewCell#&gt;: UICollectionViewCell, TCLazyReusableViewSupport {
     static let fixedHeight: CGFloat = &lt;#height#&gt;
     private weak var data: &lt;#Type#&gt;!
     
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     override init(frame: CGRect) {
@@ -61,6 +61,9 @@ final class &lt;#UICollectionViewCell#&gt;: UICollectionViewCell, TCReusableView
         self.data = data
     }
     
+    func lazyPopulate(data: TCDataType) {
+            
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>134D2488-F9EB-45FB-916F-FE0B741242EF</string>

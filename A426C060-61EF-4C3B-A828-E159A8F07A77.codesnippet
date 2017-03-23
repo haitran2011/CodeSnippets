@@ -11,10 +11,11 @@
 	<key>IDECodeSnippetContents</key>
 	<string>import UIKit
 import TinyCoordinator
+import ExtensionKit
 
 final class &lt;#Delegate#&gt;: TCDelegate {
-        deinit {
-        loggingPrint("")
+    deinit {
+        logging("")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -&gt; CGSize {
@@ -43,8 +44,7 @@ final class &lt;#Delegate#&gt;: TCDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A426C060-61EF-4C3B-A828-E159A8F07A77</string>
 	<key>IDECodeSnippetLanguage</key>

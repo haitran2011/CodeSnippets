@@ -9,8 +9,7 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Foundation
-import UIKit
+	<string>import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 import SnapKit
@@ -23,7 +22,7 @@ final class &lt;#ViewController#&gt;: UIViewController {
     private var delegate: &lt;#Delegate#&gt;!
     
     deinit {
-        loggingPrint("")
+        logging("")
     }
     
     override internal init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -76,13 +75,13 @@ final class &lt;#ViewController#&gt;: UIViewController {
             this.tableView.reloadData()
             this.endPullToRefresh()
         }
-        
+            
         viewModel.error.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] in
             guard let this = self else { return }
             this.presentError(($0))
             this.endPullToRefresh()
         }
-        
+            
         viewModel.executing.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (executing) in
             if executing {
                 self?.view.startActivityIndicatorAnimation()
@@ -90,7 +89,7 @@ final class &lt;#ViewController#&gt;: UIViewController {
                 self?.view.stopActivityIndicatorAnimation()
             }
         }
-        
+
         viewModel.noMoreData.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] (noMoreData) in
             guard let this = self else { return }
             if noMoreData {
@@ -103,10 +102,7 @@ final class &lt;#ViewController#&gt;: UIViewController {
             }
         }
     }
-}
-
-
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A231311A-0E7C-4F5D-A161-1F6366423944</string>
 	<key>IDECodeSnippetLanguage</key>
