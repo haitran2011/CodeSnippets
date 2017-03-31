@@ -17,17 +17,11 @@ open class StickyHeadersFlowLayout: UICollectionViewFlowLayout {
         
         // MARK: - Inner funcs
         func onlyHeader(_ attributes: UICollectionViewLayoutAttributes) -&gt; Bool {
-            guard attributes.representedElementKind == UICollectionElementKindSectionHeader else {
-                return false
-            }
-            return true
+            return attributes.representedElementKind == UICollectionElementKindSectionHeader
         }
         
         func onlyCell(_ attributes: UICollectionViewLayoutAttributes) -&gt; Bool {
-            guard attributes.representedElementCategory == .cell else {
-                return false
-            }
-            return true
+            return attributes.representedElementCategory == .cell
         }
         
         // MARK: - Body Begin
