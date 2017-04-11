@@ -21,7 +21,8 @@ final internal class &lt;#ViewModel#&gt; {
     
     private(set) internal var error: MutableProperty&lt;NSError&gt;!
     private(set) internal var executing: Property&lt;Bool&gt;!
-    
+    internal fileprivate(set) var noMoreData: MutableProperty&lt;Bool&gt; = MutableProperty(true)
+
     deinit {
         logging("")
     }

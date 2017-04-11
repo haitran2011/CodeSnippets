@@ -6,7 +6,7 @@
 	<string>mdl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>final class &lt;#Class#&gt;: NSObject, Mappable, DefaultReflectable {
