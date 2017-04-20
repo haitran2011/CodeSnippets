@@ -39,6 +39,16 @@ final class &lt;#UITableViewCell#&gt;: UITableViewCell, TCLazyReusableViewSuppor
     private func setupUserInterface() {
         layoutMargins = UIEdgeInsets.zero
         separatorInset = UIEdgeInsets.zero
+        backgroundView = {
+            let view = UIView()
+            view.backgroundColor = Const.Colors.backgroundDefault
+            return view
+        }()
+        selectedBackgroundView = {
+            let view = UIView()
+            view.backgroundColor = Const.Colors.backgroundSelected
+            return view
+        }()
     }
     
     private func setupEventsBinding() {
