@@ -71,6 +71,7 @@ internal final class &lt;#ViewController#&gt;: UIViewController {
             this.dataSource.globalDataMetric = globalDataMetric
             this.collectionView.reloadData()
             this.endPullToRefresh()
+            this.presentPlaceholderDependsOn(data: globalDataMetric)
         }
             
         viewModel.error.producer.skipOnce().observeOnUIScheduler().startWithValues { [weak self] in
