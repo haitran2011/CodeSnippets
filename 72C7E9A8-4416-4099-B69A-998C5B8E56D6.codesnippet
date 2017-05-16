@@ -10,19 +10,18 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (UICollectionView *)collectionView {
-    @weakify(self);
     if (!_collectionView) {
-        @strongify(self);
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
-        _collectionView.backgroundColor = kWhiteColor;
+        _collectionView.backgroundColor = UIColor.whiteColor;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.alwaysBounceVertical = YES;
         [_collectionView registerClass:&lt;#(__unsafe_unretained Class)#&gt; forCellWithReuseIdentifier:&lt;#(NSString *)#&gt;];
         _collectionView.delegate = self;
-        _collectionView.dataSource = self.arrayDataSource;
+        _collectionView.dataSource = self;
     }
     
     return _collectionView;
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>72C7E9A8-4416-4099-B69A-998C5B8E56D6</string>
 	<key>IDECodeSnippetLanguage</key>

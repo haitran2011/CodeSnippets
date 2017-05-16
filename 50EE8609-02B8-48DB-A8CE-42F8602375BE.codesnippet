@@ -9,13 +9,12 @@
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#import &lt;Masonry/Masonry.h&gt;
-#import &lt;ReactiveCocoa/ReactiveCocoa.h&gt;
+	<string>NSString * const CellIdentifier = @"Cell";
 
-NSString * const &lt;#Cell#&gt;Identifier = @"&lt;#Cell#&gt;";
-
-@interface &lt;#Cell#&gt; ()
+@interface Cell : UITableViewCell
 @end
+
+@implementation Cell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -24,28 +23,37 @@ NSString * const &lt;#Cell#&gt;Identifier = @"&lt;#Cell#&gt;";
     }
     
     [self setupUserInterface];
-    [self setupReactiveCocoa];
+    [self setupEventsBinding];
     
     return self;
 }
 
 - (void)setupUserInterface {
+    self.layoutMargins = UIEdgeInsetsZero;
+    self.separatorInset = UIEdgeInsetsZero;
+    self.backgroundView = ({
+        UIView *view = [UIView new];
+        view.backgroundColor = UIColor.whiteColor;
+        view;
+    });
+    self.backgroundView = ({
+        UIView *view = [UIView new];
+        view.backgroundColor = [[UIColor alloc] initWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1];
+        view;
+    });
+}
+
+- (void)setupEventsBinding {
     
 }
 
-- (void)setupReactiveCocoa {
+- (void)populateData:(id)data {
     
-}
-
-#pragma mark -  Configure data
-
-- (void)configureData:(id)data {
-
 }
 
 #pragma mark -  Accessor
 
-</string>
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>50EE8609-02B8-48DB-A8CE-42F8602375BE</string>
 	<key>IDECodeSnippetLanguage</key>
