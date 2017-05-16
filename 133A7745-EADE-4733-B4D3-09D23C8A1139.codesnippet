@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString * const CellIdentifier = @"Cell";
+
+@interface Cell : UITableViewCell
+@end
+
+@implementation Cell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (!self) {
+        return nil;
+    }
+    
+    [self setupUserInterface];
+    [self setupEventsBinding];
+    
+    return self;
+}
+
+- (void)setupUserInterface {
+    self.layoutMargins = UIEdgeInsetsZero;
+    self.backgroundView = ({
+        UIView *view = [UIView new];
+        view.backgroundColor = UIColor.whiteColor;
+        view;
+    });
+    self.backgroundView = ({
+        UIView *view = [UIView new];
+        view.backgroundColor = [[UIColor alloc] initWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1];
+        view;
+    });
+}
+
+- (void)setupEventsBinding {
+    
+}
+
+- (void)populateData:(id)data {
+    
+}
+
+#pragma mark -  Accessor
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>133A7745-EADE-4733-B4D3-09D23C8A1139</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionViewCell: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
