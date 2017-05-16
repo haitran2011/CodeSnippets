@@ -20,7 +20,7 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    __kindof UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"&lt;#Identifier#&gt;" forIndexPath:indexPath];
+    __kindof UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:&lt;#Identifier#&gt; forIndexPath:indexPath];
     [cell populateData:&lt;#data#&gt;];
     return cell;
 }

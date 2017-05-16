@@ -20,7 +20,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"&lt;#Identifier#&gt;" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:&lt;#Identifier#&gt; forIndexPath:indexPath];
     [cell populateData:&lt;#data#&gt;];
     return cell;
 }
