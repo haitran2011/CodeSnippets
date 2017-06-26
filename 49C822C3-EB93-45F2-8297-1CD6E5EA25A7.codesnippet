@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@TODO("&lt;#todo_message#&gt;");</string>
+	<string>@todo("&lt;#todo_message#&gt;");</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>49C822C3-EB93-45F2-8297-1CD6E5EA25A7</string>
 	<key>IDECodeSnippetLanguage</key>
