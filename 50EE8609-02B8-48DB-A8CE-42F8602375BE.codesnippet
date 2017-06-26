@@ -36,7 +36,7 @@
         view.backgroundColor = UIColor.whiteColor;
         view;
     });
-    self.backgroundView = ({
+    self.selectedBackgroundView = ({
         UIView *view = [UIView new];
         view.backgroundColor = [[UIColor alloc] initWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1];
         view;
