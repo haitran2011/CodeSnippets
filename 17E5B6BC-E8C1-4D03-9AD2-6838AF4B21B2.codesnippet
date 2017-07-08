@@ -9,9 +9,17 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark UICollectionViewDelegateFlowLayout
+	<string>- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    id data = [self.globalDataMetric dataForItemAtIndexPath:indexPath];
+    if ([data isKindOfClass:&lt;#(__unsafe_unretained Class)#&gt;.class]) {
+        return CGSizeMake(CGRectGetWidth(collectionView.bounds), &lt;#height#&gt;);
+    }
     return CGSizeMake(CGRectGetWidth(collectionView.bounds), &lt;#CGFloat height#&gt;);
 }
 
@@ -39,13 +47,14 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>68619A26-2635-4B94-96B3-9D972DC4B973</string>
+	<string>17E5B6BC-E8C1-4D03-9AD2-6838AF4B21B2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Delegate implementation: based on UICollectionView</string>
+	<string>Delegate.m: file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

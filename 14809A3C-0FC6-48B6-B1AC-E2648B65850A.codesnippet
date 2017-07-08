@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dsc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark - TCDataSourceable
+
+- (void)registerReusableCell {
+    [self.collectionView registerClass:&lt;#Cell#&gt;.class forCellWithReuseIdentifier:&lt;#Cell#&gt;.identifier];
+}
+
+- (NSString *)reusableCellIdentifierForIndexPath:(NSIndexPath *)indexPath {
+    id data = [self.globalDataMetric dataForItemAtIndexPath:indexPath];
+    if ([data isKindOfClass:&lt;#(__unsafe_unretained Class)#&gt;.class]) {
+        return &lt;#Cell#&gt;.identifier;
+    }
+    return &lt;#Cell#&gt;.identifier;
+}
+
+- (void)loadData:(id)data forReusableCell:(UICollectionViewCell *)cell {
+    [cell populateDate:data];
+    // for iOS 10
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+}
+
+#pragma mark - TCImageLazyLoadable
+
+- (void)lazyLoadImagesData:(nonnull id)data forReusableCell:(nullable UICollectionViewCell *)cell {
+    [cell lazyPopulateDate:data];
+}
+
+#pragma mark - TCCollectionSupplementaryViewibility
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    return [self viewForSupplementaryElementOfKind:kind atIndexPath:indexPath];
+}
+
+- (void)registerReusableSupplementaryView {
+    [self.collectionView registerClass:&lt;#headerfooter#&gt;.class forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:&lt;#headerfooter#&gt;.identifier];
+}
+
+- (nullable NSString *)reusableSupplementaryHeaderViewIdentifierForIndexPath:(nonnull NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (void)loadData:(nonnull id)data forReusableSupplementaryHeaderView:(nonnull UICollectionReusableView *)reusableView {
+    [reusableView populateDate:data];
+}
+
+- (nullable NSString *)reusableSupplementaryFooterViewIdentifierForIndexPath:(nonnull NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (void)loadData:(nonnull id)data forReusableSupplementaryFooterView:(nonnull UICollectionReusableView *)reusableView {
+    [reusableView populateDate:data];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>14809A3C-0FC6-48B6-B1AC-E2648B65850A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DataSource.m: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

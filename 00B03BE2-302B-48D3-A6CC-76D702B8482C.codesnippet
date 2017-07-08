@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "BaseApi.h"
+#import &lt;YYModel/YYModel.h&gt;
+#import &lt;ThinningCoordinator/ThinningCoordinator.h&gt;
+
+@interface &lt;#ViewModel#&gt; ()
+
+@property (nonatomic, strong) RACCommand&lt;&lt;#Type#&gt;, TCGlobalDataMetric *&gt; *command;
+@property (nonatomic, strong) TCGlobalDataMetric *globalDataMetric;
+@property (nonatomic, strong) NSError *error;
+
+@property (nonatomic, assign) NSUInteger currentPage;
+
+@end
+
+@implementation &lt;#ViewModel#&gt;
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _currentPage = 1;
+    
+    @weakify(self);
+    _command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(&lt;#Type#&gt; _Nullable input) {
+        @strongify(self);
+        BaseApi *api = &lt;#Api#&gt;;
+        return [api.rr_resultWithHeadersSignal map:^id _Nullable(RACTuple * _Nullable value) {
+            TCGlobalDataMetric *globalDataMetric;
+            NSArray *items = @[];
+            if (1 == self.currentPage) {
+                TCSectionDataMetric *section = [[TCSectionDataMetric alloc] initWithItemsData:items];
+                globalDataMetric = [[TCGlobalDataMetric alloc] initWithSectionDataMetrics:@[section]];
+            } else {
+                [self.globalDataMetric appendLastSectionContentsOf:items];
+                globalDataMetric = self.globalDataMetric;
+            }
+            @onExit {
+                ++self.currentPage;
+            };
+            globalDataMetric.noMoreData = value.first;
+            return globalDataMetric;
+        }];
+    }];
+    
+    RAC(self, globalDataMetric) = _command.rr_next;
+    RAC(self, error) = _command.rr_error;
+    
+    return self;
+}
+
+- (void)fetchData {
+    [self.command execute:nil];
+}
+
+- (void)refetchData {
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>00B03BE2-302B-48D3-A6CC-76D702B8482C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewModel.m: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

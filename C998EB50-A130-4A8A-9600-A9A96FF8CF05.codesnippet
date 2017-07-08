@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vct</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+@interface &lt;#VC#&gt; ()
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) &lt;#ViewModelType#&gt; *viewModel;
+@property (nonatomic, strong) &lt;#DataSourceType#&gt; *dataSource;
+@property (nonatomic, strong) &lt;#DelegateType#&gt; *delegate;
+
+@end
+
+@implementation &lt;#VC#&gt;
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupUserInterface];
+    [self setupEventsBinding];
+    [self.viewModel fetchData];
+}
+
+- (void)setupUserInterface {
+    [self.view addSubview:self.tableView];
+    [self.tableView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+}
+
+- (void)setupEventsBinding {
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self.delegate;
+    
+    @weakify(self);
+    RACSignal *update = RACObserve(self.viewModel, globalDataMetric).rr_nonnull;
+    RAC(self.dataSource, globalDataMetric) = update;
+    [update.deliverOnMainThread subscribeNext:^(TCGlobalDataMetric * _Nullable x) {
+        @strongify(self);
+        [self.tableView reloadData];
+        [self.tableView rr_didReloadDataWithNoMoreData:x.noMoreData];
+    }];
+    
+    [RACObserve(self.viewModel, error).rr_nonnull.deliverOnMainThread subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.tableView rr_endRefresh];
+        [self ek_presentError:x];
+    }];
+    
+    [self.tableView rr_addInfinityScrollWithhandler:^(UIScrollView *scrollView) {
+        @strongify(self);
+        [self.viewModel fetchData];
+    }];
+    
+    [self.tableView rr_addPullToRefreshWithhandler:^(UIScrollView *scrollView) {
+        @strongify(self);
+        [self.viewModel refetchData];
+    }];
+}
+
+- (&lt;#DelegateType#&gt; *)delegate {
+    if (!_delegate) {
+        _delegate = [[&lt;#DelegateType#&gt; alloc] initWithTableView:self.tableView];
+    }
+    return _delegate;
+}
+
+- (&lt;#DataSourceType#&gt; *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[&lt;#DataSourceType#&gt; alloc] initWithTableView:self.tableView];
+    }
+    return _dataSource;
+}
+
+- (&lt;#ViewModelType#&gt; *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [&lt;#ViewModelType#&gt; new];
+    }
+    return _viewModel;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.showsHorizontalScrollIndicator = NO;
+    }
+    
+    return _tableView;
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C998EB50-A130-4A8A-9600-A9A96FF8CF05</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIViewController.m: based on UITableView file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dst</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark - TCDataSourceable
+
+- (void)registerReusableCell {
+    [self.tableView registerClass:&lt;#Cell#&gt;.class forCellReuseIdentifier:&lt;#Cell#&gt;.identifier];
+}
+
+- (NSString *)reusableCellIdentifierForIndexPath:(NSIndexPath *)indexPath {
+    id data = [self.globalDataMetric dataForItemAtIndexPath:indexPath];
+    if ([data isKindOfClass:&lt;#(__unsafe_unretained Class)#&gt;.class]) {
+        return &lt;#Cell#&gt;.identifier;
+    }
+    return &lt;#Cell#&gt;.identifier;
+}
+
+- (void)loadData:(id)data forReusableCell:(UICollectionViewCell *)cell {
+    [cell populateDate:data];
+    // for iOS 10
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+}
+
+#pragma mark - TCImageLazyLoadable
+
+- (void)lazyLoadImagesData:(nonnull id)data forReusableCell:(nullable UICollectionViewCell *)cell {
+    [cell lazyPopulateDate:data];
+}
+
+#pragma mark - TCTableViewHeaderFooterViewibility
+
+- (void)registerReusableHeaderFooterView {
+}
+
+- (nullable NSString *)reusableHeaderViewIdentifierInSection:(NSInteger)section {
+    return nil;
+}
+
+- (void)loadData:(nonnull id)data forReusableHeaderView:(nonnull UITableViewHeaderFooterView *)headerView {
+    [headerView populateDate:data];
+}
+
+- (nullable NSString *)reusableFooterViewIdentifierInSection:(NSInteger)section {
+    return nil;
+}
+
+- (void)loadData:(nonnull id)data forReusableFooterView:(nonnull UITableViewHeaderFooterView *)footerView {
+    [footerView populateDate:data];
+}
+
+#pragma mark - TCTableViewEditable
+
+- (BOOL)canEditElementAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (void)commitEditingStyle:(UITableViewCellEditingStyle)style forData:(nonnull id)data {
+}
+
+#pragma mark - TCTableViewCollectionViewMovable
+
+- (BOOL)canMoveElementAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (void)moveElementAtIndexPath:(nonnull NSIndexPath *)sourceIndexPath toIndexPath:(nonnull NSIndexPath *)destinationIndexPath {
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7BEB35A7-0B08-426E-8352-85AD44F1BABA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DataSource.m: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
