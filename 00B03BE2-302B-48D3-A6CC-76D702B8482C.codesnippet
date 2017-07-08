@@ -51,10 +51,10 @@
                 [self.globalDataMetric appendLastSectionContentsOf:items];
                 globalDataMetric = self.globalDataMetric;
             }
+            globalDataMetric.noMoreData = ((NSNumber *)value.second[@"noMoreData"]).boolValue;
             @onExit {
                 ++self.currentPage;
             };
-            globalDataMetric.noMoreData = value.first;
             return globalDataMetric;
         }];
     }];
