@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>vm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "BaseApi.h"
+#import &lt;YYModel/YYModel.h&gt;
+#import &lt;ThinningCoordinator/ThinningCoordinator.h&gt;
+
+@interface &lt;#ViewModel#&gt; ()
+
+@property (nonatomic, strong) RACCommand&lt;&lt;#ParamType#&gt;, TCGlobalDataMetric *&gt; *command;
+@property (nonatomic, strong) TCGlobalDataMetric *globalDataMetric;
+@property (nonatomic, strong) NSError *error;
+
+@property (nonatomic, assign) NSUInteger currentPage;
+
+@end
+
+@implementation &lt;#ViewModel#&gt;
+
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _currentPage = 1;
+    
+    @weakify(self);
+    _command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(&lt;#ParamType#&gt; _Nullable input) {
+        @strongify(self);
+        BaseApi *api = nil;
+        return [api.rr_signal map:^id _Nullable(id  _Nullable value) {
+            TCGlobalDataMetric *globalDataMetric;
+            NSArray *items = @[];
+            if (1 == self.currentPage) {
+                TCSectionDataMetric *section = [[TCSectionDataMetric alloc] initWithItemsData:items];
+                globalDataMetric = [[TCGlobalDataMetric alloc] initWithSectionDataMetrics:@[section]];
+            } else {
+                [self.globalDataMetric appendLastSectionContentsOf:items];
+                globalDataMetric = self.globalDataMetric;
+            }
+            @onExit {
+                ++self.currentPage;
+            };
+            return globalDataMetric;
+        }];
+    }];
+    
+    RAC(self, globalDataMetric) = _command.rr_next;
+    RAC(self, error) = _command.rr_error;
+    
+    return self;
+}
+
+- (void)fetchData {
+    [self.command execute:&lt;#Param#&gt;];
+}
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>01BA9224-3C7C-4152-9487-E579772C7118</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewModel.m: file completion</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

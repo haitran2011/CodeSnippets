@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>field</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UITextField *)&lt;#name#&gt; {
+    if (!_&lt;#name#&gt;) {
+        UITextField *view = [UITextField new];
+        view.borderStyle = UITextBorderStyleNone;
+        view.keyboardType = UIKeyboardTypeDefault;
+        view.autocorrectionType = UITextAutocorrectionTypeNo;
+        view.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        view.placeholder = EKLocalizedString(@"");
+        view.font = UIFont.ek_size13;
+        view.clearButtonMode = UITextFieldViewModeWhileEditing;
+        view.adjustsFontSizeToFitWidth = YES;
+        view.secureTextEntry = NO;
+        view.clearsOnBeginEditing = NO;
+        view.leftView = [[UIImageView alloc] initWithImage:RRMakeImage(CGSizeMake(30, 30))];
+        view.leftViewMode = UITextFieldViewModeAlways;
+        view.ek_contentInsets = UIEdgeInsetsMake(0, 40, 0, 12);
+        _&lt;#name#&gt; = view;
+    }
+    return _&lt;#name#&gt;;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>27F10B58-C7D7-4A1E-BAC8-CDC55378F886</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITextField: lazy property</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

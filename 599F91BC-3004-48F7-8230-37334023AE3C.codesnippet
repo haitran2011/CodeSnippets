@@ -3,34 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vc</string>
+	<string>view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)dealloc {
-    NSLog(@"~~~~~~~~~~~%s~~~~~~~~~~~", __FUNCTION__);
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupUserInterface];
-    [self setupEventsBinding];
-}
-
-- (void)setupUserInterface {
-}
-
-- (void)setupEventsBinding {
-}
-</string>
+	<string>- (UIView *)&lt;#name#&gt; {
+    if (!_&lt;#name#&gt;) {
+        UIView *view = [UIView new];
+        view.backgroundColor = UIColor.whiteColor;
+        _&lt;#name#&gt; = view;
+    }
+    return _&lt;#name#&gt;;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>926EE8B8-4FC1-465F-A806-279F90E6460F</string>
+	<string>599F91BC-3004-48F7-8230-37334023AE3C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController.m: short impl</string>
+	<string>UIView: lazy property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,34 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vc</string>
+	<string>vm</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)dealloc {
-    NSLog(@"~~~~~~~~~~~%s~~~~~~~~~~~", __FUNCTION__);
-}
+	<string>@class TCGlobalDataMetric;
+@interface &lt;#ViewModel#&gt;: NSObject
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupUserInterface];
-    [self setupEventsBinding];
-}
+@property (nonatomic, strong, readonly) TCGlobalDataMetric *globalDataMetric;
+@property (nonatomic, strong, readonly) NSError *error;
 
-- (void)setupUserInterface {
-}
+- (void)fetchData;
 
-- (void)setupEventsBinding {
-}
+@end
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>926EE8B8-4FC1-465F-A806-279F90E6460F</string>
+	<string>DEAF2F5B-1FCC-4096-BF22-F3A657A7DA91</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController.m: short impl</string>
+	<string>ViewModel.h: file completion</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

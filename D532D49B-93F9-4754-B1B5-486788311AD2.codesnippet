@@ -3,37 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vc</string>
+	<string>init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)dealloc {
-    NSLog(@"~~~~~~~~~~~%s~~~~~~~~~~~", __FUNCTION__);
+	<string>- (instancetype)initWith&lt;#cursor#&gt; {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    &lt;#cursor#&gt;
+    return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupUserInterface];
-    [self setupEventsBinding];
-}
-
-- (void)setupUserInterface {
-}
-
-- (void)setupEventsBinding {
-}
-</string>
+- (instancetype)init {
+    [NSException raise:@"Method not available." format:@""];
+    return nil;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>926EE8B8-4FC1-465F-A806-279F90E6460F</string>
+	<string>D532D49B-93F9-4754-B1B5-486788311AD2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController.m: short impl</string>
+	<string>UIViewController: designed initializer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
