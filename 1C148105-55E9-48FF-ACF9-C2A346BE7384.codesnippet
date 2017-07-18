@@ -14,9 +14,7 @@
     if (!self) {
         return nil;
     }
-    
-    &lt;#cursor#&gt;
-    
+    &lt;#cursor#&gt;    
     return self;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
