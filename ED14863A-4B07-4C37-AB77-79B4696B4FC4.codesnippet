@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>arrow</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIImageView *)arrowImageView {
+    if (!_arrowImageView) {
+        UIImageView *iv = [UIImageView new];
+        iv.contentMode = UIViewContentModeScaleAspectFill;
+        iv.clipsToBounds = YES;
+        iv.image = [UIImage imageNamed:@"arrowR"];
+        _arrowImageView = iv;
+    }
+    return _arrowImageView;
+}
+
+[self.contentView addSubview:self.arrowImageView];
+[self.arrowImageView makeConstraints:^(MASConstraintMaker *make) {
+    make.width.equalTo(8);
+    make.height.equalTo(13);
+    make.right.equalTo(self.contentView).offset(-12);
+    make.centerY.equalTo(self.contentView);
+}];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ED14863A-4B07-4C37-AB77-79B4696B4FC4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ArrowImageView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
