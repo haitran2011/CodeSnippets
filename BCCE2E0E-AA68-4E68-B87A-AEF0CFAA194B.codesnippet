@@ -12,8 +12,7 @@
 	<string>#pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
 &lt;#code#&gt;
-#pragma clang diagnostic pop
-</string>
+#pragma clang diagnostic pop</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BCCE2E0E-AA68-4E68-B87A-AEF0CFAA194B</string>
 	<key>IDECodeSnippetLanguage</key>
