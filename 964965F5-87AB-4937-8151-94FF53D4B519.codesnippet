@@ -18,13 +18,36 @@
         _scrollView = scrollView;
     }
     return _scrollView;
-}</string>
+}
+
+- (UIView *)contentView {
+    if (!_contentView) {
+        UIView *view = [UIView new];
+        view.backgroundColor = UIColor.whiteColor;
+        _contentView = view;
+    }
+    return _contentView;
+}
+
+[self.view addSubview:self.scrollView];
+[self.scrollView makeConstraints:^(MASConstraintMaker *make) {
+    make.edges.equalTo(self.view);
+}];
+
+[self.scrollView addSubview:self.contentView];
+[self.contentView makeConstraints:^(MASConstraintMaker *make) {
+    make.edges.equalTo(self.scrollView);
+    make.width.equalTo(self.scrollView);
+}];
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIView *contentView;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AE219578-B3B3-4F93-AD59-C1C172AA1C24</string>
+	<string>964965F5-87AB-4937-8151-94FF53D4B519</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIScrollView: lazy property</string>
+	<string>Scrollable contentView for VC</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
