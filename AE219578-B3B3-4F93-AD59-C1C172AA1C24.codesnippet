@@ -3,25 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>init</string>
+	<string>scrollView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)init {
-    [NSException raise:@"Method not available." format:@""];
-    return nil;
+	<string>- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        UIScrollView *scrollView = [UIScrollView new];
+        scrollView.backgroundColor = UIColor.whiteColor;
+        scrollView.alwaysBounceVertical = YES;
+        _scrollView = scrollView;
+    }
+    return _scrollView;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1042C748-A9F6-4276-B5D2-E024A703BC11</string>
+	<string>AE219578-B3B3-4F93-AD59-C1C172AA1C24</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Disable default initializer</string>
+	<string>UIScrollView: lazy property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
