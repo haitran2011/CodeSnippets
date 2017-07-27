@@ -27,7 +27,8 @@
     make.right.equalTo(self.contentView).offset(-12);
     make.centerY.equalTo(self.contentView);
 }];
-</string>
+
+@property (nonatomic, strong) UIImageView *arrowImageView;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>ED14863A-4B07-4C37-AB77-79B4696B4FC4</string>
 	<key>IDECodeSnippetLanguage</key>
