@@ -19,7 +19,6 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
     }
-    
     return _collectionView;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
