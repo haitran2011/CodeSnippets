@@ -3,22 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sizeForItem</string>
+	<string>attr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        CGFloat width = CGRectGetWidth(collectionView.bounds);
-        CGSize size = [self sizeForItemAtIndexPath:indexPath preferredLayoutSizeFittingSize:CGSizeMake(width, UILayoutFittingExpandedSize.height) cellType:&lt;#Cell#&gt;.class];
-        return CGSizeMake(width, size.height);
+	<string>NSTextAttachment *attachment = [NSTextAttachment new];
+                UIImage *image = [UIImage imageNamed:@"&lt;#name#&gt;"];
+                attachment.image = image;
+                attachment.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
+NSMutableAttributedString *attributedText = [[NSAttributedString attributedStringWithAttachment:attachment] mutableCopy];
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1E061D12-F9E3-4E04-A8AC-4C9A612FF837</string>
+	<string>2E5679D7-E774-4CAE-A7DA-E4D8B6422ED6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UICollectionViewCell size compute</string>
+	<string>NSAttributedString: new textAttachment instance</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
