@@ -3,37 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vc</string>
+	<string>me</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import UIKit
-import SnapKit
-
-final class &lt;#vc#&gt;: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUserInterface()
-        setupEventsBinding()
-    }
-    
-    private func setupUserInterface() {
-        
-    }
-    
-    private func setupEventsBinding() {
-        
-    }
-}</string>
+	<string>guard let me = self else { return }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>49FDE263-D6F9-4926-8FC7-F92A94875785</string>
+	<string>0845CC69-DF23-41C1-AF9C-677DDF52B19A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController: file completion</string>
+	<string>guard let me = self</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
