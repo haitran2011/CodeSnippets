@@ -3,22 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sizeForItem</string>
+	<string>loc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        CGFloat width = CGRectGetWidth(collectionView.bounds);
-        CGSize size = [self sizeForItemAtIndexPath:indexPath preferredLayoutSizeFittingSize:CGSizeMake(width, UILayoutFittingExpandedSize.height) cellType:&lt;#Cell#&gt;.class];
-        return CGSizeMake(width, size.height);
-</string>
+	<string>NSLocalizedString("&lt;#string#&gt;", tableName: "&lt;#tabname#&gt;", comment: "")</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1E061D12-F9E3-4E04-A8AC-4C9A612FF837</string>
+	<string>EBE60311-8AB9-4613-968C-4F8843DF7650</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UICollectionViewCell size compute</string>
+	<string>Swift NSLocalizedString init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
